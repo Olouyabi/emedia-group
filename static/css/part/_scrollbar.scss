@@ -1,0 +1,22 @@
+/* Scrollbar styling */
+
+/* Works on Firefox */
+.scroll-black * {
+	scrollbar-width: thin;
+	scrollbar-color: rgb(70, 70, 70) auto;
+}
+
+/* Works on Chrome, Edge, and Safari */
+.scroll-black *::-webkit-scrollbar {
+	width: 7px;
+}
+
+.scroll-black *::-webkit-scrollbar-track {
+	background: transparent;
+}
+
+.scroll-black *::-webkit-scrollbar-thumb {
+	background-color:rgb(70, 70, 70);
+}
+
+/* End scrollbar styling*/

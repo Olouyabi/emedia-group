@@ -1,0 +1,90 @@
+.social-nav{
+    @include flexCenter(row, space-evenly);
+   
+    a{
+        @include flexCenter(column, center);
+        margin: 5rem 0;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: $white;
+        transition: $transitioneasy;
+       
+        span{
+            color: $titlecolor;
+            font-size: 2.5rem;
+            transition: $transitioneasy;
+        }
+
+        &:hover{
+            background: $titlecolor;
+            color: $white;
+         
+            & span{
+                color: $white;
+            }
+        }
+    }
+}
+
+.social-hero{
+    width : 60%;
+    @include flexCenter(row, space-evenly);
+    margin-top: 2rem;
+    /* margin-left: 40px */
+   
+    a{
+        @include flexCenter(column, center);
+        margin: 2rem 0;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: $primecolor;
+        transition: $transitioneasy;
+    
+        span{
+            color: $white;
+            font-size: 2.5rem;
+            transition: $transitioneasy;
+        }
+
+        &:hover{
+            background: $titlecolor;
+            color: $primecolor;
+         
+            & span{
+                color: $primecolor;
+            }
+        }
+    }
+}
+
+.social-footer{
+    width : 70%;
+    @include flexCenter(row, space-between);
+   
+    a{
+        @include flexCenter(column, center);
+        // margin-right:  5px;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: $white;
+        transition : $transitioneasy;
+    
+        span{
+            color : $primecolor;
+            font-size : 1.3rem;
+            transition : $transitioneasy;
+        }
+
+        &:hover{
+            background: $titlecolor;
+            color: $primecolor;
+         
+            & span{
+                color: $primecolor;
+            }
+        }
+    }
+}

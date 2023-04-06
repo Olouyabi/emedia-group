@@ -1,0 +1,44 @@
+﻿
+@keyframes changeColor{
+  0%{
+    color: $white;
+  }
+  50%{
+    color: $primecolor;
+  }
+
+  100%{
+    color: $white;
+  }
+}
+
+
+@keyframes bounce{
+
+  0%, 20%, 50%, 80%, 100%{
+    transform: translateY(0);
+  }
+
+  40%{
+    transform: translateY(-0px);
+  }
+
+  59%{
+    transform: translateY(-10px);
+  }
+}
+
+
+  @keyframes oxille {
+   0% {
+      left: 0px;
+   }
+
+   50% {
+      left: 15px;
+   }
+
+   100% {
+      left: 0px;
+   }
+}

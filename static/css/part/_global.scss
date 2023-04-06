@@ -1,0 +1,306 @@
+﻿*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Works on Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: $primecolor $titlecolor;
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+    background: $titlecolor;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: $primecolor;
+    border-radius: 20px;
+    border: 3px solid $titlecolor;
+}
+
+
+html {
+    scroll-behavior: smooth;
+    font-family: $sitefont;
+    font-size: 10px;
+    overflow-x: hidden;
+
+    &::-webkit-scrollbar {
+        width: 8px !important;
+    }
+
+    &-webkit-scrollbar-track {
+        background: $titlecolor;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: $titlecolor !important;
+        border-radius: $bradius;
+        ;
+    }
+
+}
+
+body {
+    overflow-x: hidden;
+    // line-height: 1.7;
+    color: $primecolor;
+    font-size: $font-size-base;
+    background-color: $white;
+    min-width: 100%;
+    margin: 0;
+    height: 100;
+}
+
+
+::-moz-selection {
+    background: $titlecolor;
+    color: $white;
+}
+
+::selection {
+    background: $titlecolor;
+    color: $white;
+}
+
+a {
+    text-decoration: none !important;
+    transition: .3s all ease;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.btn-otec-2 {
+    font-size: 2.5rem;
+    background: $hovercolor;
+    color: $titlecolor;
+    padding: 0.7rem;
+    border-bottom-left-radius: $bradius;
+    border-bottom-right-radius: $bradius;
+    transition: $transitioneasy;
+
+    &:hover {
+        background: $white;
+        color: $titlecolor;
+    }
+}
+
+
+.btn-otec-1 {
+    font-size: 2rem;
+    background: $titlecolor;
+    color: $hovercolor;
+    padding: 0.8rem;
+    border-radius: $bradius;
+    transition: $transitioneasy;
+    border: 0;
+    -webkit-box-shadow: 0px -1px 7px 3px rgba(0, 0, 0, 0.32);
+    -moz-box-shadow: 0px -1px 7px 3px rgba(0, 0, 0, 0.32);
+    box-shadow: 0px -1px 7px 3px rgba(0, 0, 0, 0.32);
+
+    &:hover {
+        background: $white;
+        color: $titlecolor;
+    }
+}
+
+.btn-otec-3 {
+    font-size: 2rem;
+    background: $hovercolor;
+    color: $titlecolor;
+    padding: 0.8rem;
+    border-radius: $bradius;
+    transition: $transitioneasy;
+    border: 0;
+    -webkit-box-shadow: 0px -1px 7px 3px rgba(0, 0, 0, 0.32);
+    -moz-box-shadow: 0px -1px 7px 3px rgba(0, 0, 0, 0.32);
+    box-shadow: 0px -1px 7px 3px rgba(0, 0, 0, 0.32);
+
+    &:hover {
+        background: $white;
+        color: $titlecolor;
+    }
+}
+
+
+ul,
+ol {
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    list-style: none;
+}
+
+section {
+    margin: 8rem auto;
+
+    &.sans-mh {
+        margin: 0 auto;
+    }
+}
+
+.detail {
+    font-size: 2rem;
+    color: $black;
+
+    @include respond-below(md) {
+        font-size: 1.5rem;
+    }
+}
+
+.clef {
+    color: $hovercolor;
+    font-weight: 700;
+}
+
+.special {
+    color: $titlecolor;
+    font-weight: 900;
+}
+
+.enveloppe {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    min-height: 100%;
+    // margin-bottom: -50px;
+    // top: 0;
+    // margin: 0;
+    // padding: 0;
+    z-index: 1;
+    transition: $transitioneasy;
+
+    &.blur {
+        /* filter: blur(50px);
+        pointer-events: none; */
+
+        &:before {
+            position: absolute;
+            content: "";
+            background: $black;
+            width: 100%;
+            height: 100%;
+            opacity: .5;
+            z-index: 30;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+    }
+}
+
+
+.emedia-btn {
+    background: $primecolor;
+    color: $white;
+    border-radius: $bradius;
+    font-size: 1.5em;
+    padding: 5px 7px;
+    margin-top: 10rem;
+    font-weight: 500;
+    transition: $transitioneasy;
+
+
+    &:hover {
+        background: $titlecolor;
+        color: $primecolor;
+        box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+    }
+
+}
+
+.title-block {
+    padding-top: 3rem;
+    margin-bottom: 2rem;
+    // @include flexCenter(row, center);
+    /* margin-bottom: 3rem; */
+
+    .los {
+        @include flexCenter(row, center);
+        margin-bottom : 1rem;
+
+        .losange {
+            width: 10px;
+            height: 10px;
+            transform: rotate(45deg);
+            
+            &.losange-1{
+                border: 2px solid $titlecolor;
+            }
+
+            &.losange-2{
+                border: 2px solid $primecolor;
+            }
+        }
+
+            .trait{
+                width: 75px;
+                height: 3px;
+
+                &.trait-1{
+                background: $titlecolor;
+                }
+
+                &.trait-2{
+                 background: $primecolor;
+                }
+            }
+    }
+
+    .title {
+        font-size : 3rem;
+        text-transform : uppercase;
+        color : $titlecolor;
+        font-family :"Roboto";
+        text-align : center;
+        // padding-bottom: 1rem;
+
+        @include respond-below(md) {
+            font-size: 3.5rem;
+        }
+
+        &.white {
+            color: $white;
+        }
+
+        &.centre {
+            &::after {
+
+                left: 45%;
+            }
+        }
+    }
+
+}
+
+.afrobande-x{
+    width: 100%;
+    height: 30px;
+    background-image : url(../images/banners/bg_africa_colors-full.svg);
+    @include imageConfig;
+    }
+
+.btn-primary, .emedia-btn {
+  color: #fff !important;
+  background-color: $primecolor !important;
+  border-color: $primecolor !important;
+  font-size: 1.8rem;
+   &:hover {
+        background: $white !important;
+        color: $titlecolor !important;
+    }
+}

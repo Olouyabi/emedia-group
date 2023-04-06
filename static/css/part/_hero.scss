@@ -1,0 +1,172 @@
+.hero-row {
+  @include sectionView ;
+  background-image: url(../images/banners/africa_colorsangle.png);
+  @include imageConfig;
+
+  /*--------Partie gauche de Hero------*/
+  .hero-home {
+    background-image: url(../images/banners/africa_colors10.svg);
+    @include imageConfig;
+
+    .hero-author {
+      width: 100%;
+      margin-top: 8rem;
+      @include flexCenter(column, center);
+      
+      img {
+        width: 300px;
+        margin-bottom: -2rem;
+        z-index: 2;
+      }
+
+      .hero-info {
+        @include flexCenter(column, center);
+        width: 90%;
+        background: rgba($white, 0.5);
+        margin: 0 auto;
+        min-height: 100px;
+        border-radius: $bradius;
+        z-index: 1;
+        box-shadow: $box-shadow;
+
+        .hero-author-hi {
+          margin: 0 auto;
+          @include flexCenter(column, center);
+          width: 100%;
+          background: $white;
+          font-family: $titlefont;
+          border-radius: $bradius;
+          padding-top: 2rem;
+
+          span {
+            font-size: 1.5em;
+            color: $primecolor;
+            font-weight: 700;
+            padding: 15px 10px;
+            line-height: 30px;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+
+  /*--------Partie droite de Hero------*/
+  .hero-right {
+    margin: 0 !important;
+    padding: 0 !important;
+    @include flexCenter(column, center);
+  
+    .hero-intro {
+      z-index: 3;
+      position: relative;
+      margin-top: 5%;
+      /* margin-left: 40px; */
+
+      @include respond-below(md) {
+        margin-top: 80%;
+        /* margin-left: -80%; */
+      }
+
+      @include respond-below(sm) {
+        margin-top: 0;
+       /*  margin-left: 2rem; */
+      }
+
+      .hero-heading {
+        /*   margin-left: -100px; */
+
+        .hero-title {
+          font-size: 70px;
+          color: $titlecolor;
+          font-weight: 500;
+          // line-height: 10px;
+          letter-spacing: 0.6rem;
+          font-family: $sitefont;
+
+          @include respond-below(md) {
+            font-size: 80px;
+            line-height: 50px;
+          }
+
+          @include respond-below(sm) {
+            font-size: 60px;
+            line-height: 30px;
+          }
+
+          &.homeless-h {
+            font-size: 7rem;
+            color: $white;
+            font-weight: 700;
+          }
+        }
+
+        .hero-subtitle {
+          font-size: 8rem;
+          color: $primecolor;
+          text-transform: uppercase;
+          line-height: 15px;
+          font-family: $sitefont;
+          letter-spacing: 0.5rem;
+          font-weight: 900;
+
+          @include respond-below(md) {
+            font-size: 5.2rem;
+            color: $titlecolor;
+            line-height: 60px;
+          }
+
+          @include respond-below(sm) {
+            font-size: 4rem;
+          }
+
+          &.homeless-span {
+            text-transform: uppercase;
+            font-size: 80px;
+            color: $hovercolor;
+            font-weight: 900;
+            line-height: 20px;
+          }
+        }
+      }
+
+      .hero-slogan {
+        margin-top: 2rem;
+        .slogan {
+          font-size: 3rem;
+          color: $primecolor !important;
+          text-align: center;
+          font-family: $titlefont;
+
+         
+          @include respond-below(md) {
+            font-size: 2rem;
+          }
+
+          @include respond-below(sm) {
+            font-size: 1.8rem;
+          }
+
+          &.homeless-p {
+            font-size: 5rem;
+            line-height: 40px;
+            color: $hovercolor !important;
+          }
+        }
+      }
+    }
+      .explorer{
+        width: 100%;
+        @include flexCenter(column, center);
+  
+      }
+
+    .hero-right-bg{
+      background-image: url(../images/banners/africa_colorsangle.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      // background-attachment: scroll;
+      background-position: right !important;
+    }
+  }
+}

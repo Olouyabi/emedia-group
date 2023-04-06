@@ -1,0 +1,144 @@
+﻿
+.youtube{
+    margin-top: 5rem !important;
+
+    .bg-youtube {
+        @include flexCenter(column, space-between);
+        
+        .bg-cover{
+            @include flexCenter(column, space-between);
+            width : 100%;
+            height: 150px;
+            background: url('./../../src/img/partenaires/bg_clients-5.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: top;
+            background-attachment: scroll;
+            @include respond-below(md) {
+                height: 300px;
+                
+            }
+    
+            .yt-p{
+                font-size: 2.3rem;
+                margin-top: 2.3rem;
+                color: $white;
+                @include respond-below(md) {
+                    width: 90%;
+                    margin-top: 2rem;
+                    margin-bottom:1rem;
+                }
+            }
+   
+        }
+        .yt{
+            @include flexCenter(column, space-between);
+            margin-top: -8rem;
+            width: 100%;
+
+            @include respond-below(md) {
+                margin-top: -10rem;
+            }
+
+            
+
+            iframe{
+                @include respond-below(sm) {
+                    width: 98%;
+                    height: 100%;   
+                }
+            }
+        }
+
+    }
+   
+    
+}
+
+
+.item { 
+    border: none;
+    margin-bottom: 30px;
+    border-radius: 4px;
+    a {
+        display: block;
+        overflow: hidden;
+        position: relative;
+        border-radius: 4px;
+        img {
+            position: relative;
+            transform: scale(1.0);
+            transition: .3s all ease-in-out;
+        }
+    }
+    .item-wrap {
+        display: block;
+        position: relative;
+        &:after {
+            z-index: 2;
+              position: absolute;
+              content: "";
+              top: 0; left: 0; right: 0; bottom: 0;
+              background: rgba($black, .4);
+              visibility: hidden;
+              opacity: 0;
+              transition: .3s all ease-in-out;
+        }
+        > span {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            z-index: 3;
+            transform: translate(-50%, -50%) scale(0.0);
+              color: $white;
+              font-size: 1.7rem;
+              opacity: 0;
+              visibility: hidden;
+              // margin-top: 10px;
+              transition: .3s all ease;
+        }
+        &:hover {
+            &:after {
+                opacity: 1;
+                visibility: visible;
+            }
+            span {
+                margin-top: 0px;
+                opacity: 1;
+                visibility: visible;
+                transform: translate(-50%, -50%) scale(1.0);
+            }
+        }
+    }
+  
+    &:hover {
+        a {
+              img {
+                  transform: scale(1.05);
+                transition: .3s all ease-in-out;
+              }
+          }
+    }
+
+    p{
+        margin-top: 0.5rem;
+        font-size: 2.2em;
+        color: $menucolor;
+
+        span{
+            font-size: 0.7em;
+            color: $hovercolor;
+        }
+
+        &.police{
+            font-size: 1.7em;
+        }
+    }
+  }
+  
+
+ 
+  
+
+
+

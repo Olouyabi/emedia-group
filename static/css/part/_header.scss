@@ -1,0 +1,165 @@
+﻿#header{
+    position: fixed;
+	width: 100%;
+	z-index: 10;
+	transition: $transitioneasy;
+	top: 0;
+    
+    .navbar {
+		width: 100%;
+        height: 60px;
+		@include flexCenter(row, flex-end);
+        padding: 0;
+        transition: $transitioneasy;
+
+        .navbranding 
+            {
+            
+                .navbranda{
+                    @include flexCenter(row, center);
+                        img {
+                            width: 75px !important;
+                            transition: $transitioneasy;
+                            display: none;
+                        }
+                    
+                    }
+
+            #author-name{
+                font-size: 2rem;
+                color: $primecolor;
+                font-weight: 700;
+                word-spacing: 3px;
+                transition: $transitioneasy;
+                margin-left: 5px;
+                display: none;
+                // font-family: $sitefont;
+            
+                // #author-last{
+                //     text-transform: uppercase;
+                //     font-family: $sitefont;
+                // }
+                
+                @include respond-below(sm) {
+                    font-size: 1.7rem;
+                }
+            }
+		}
+
+		.navtoggler {
+			@include flexCenter(row, space-between);
+			cursor: pointer;
+
+			.icon-menu {
+				color: $primecolor!important;
+				font-size: 3rem;
+				font-weight: 300;
+				@include respond-below(md) {
+					color: $titlecolor!important;
+				}
+			}
+		}
+	}
+
+	/*************************************** SCROLLING MODE *******************************/
+	&.scrolling-active{
+		background: $bannercolor;
+		box-shadow: 0px 3px 1rem rgba($black, .1);
+
+            .navbar {
+                width: 100%;
+                @include flexCenter(row, space-between);
+                height: 50px;
+
+                .navbranding {
+                    img {
+                        width: 50px !important;
+                        display: block;
+                    }
+
+                    #author-name{
+                        display: block;
+                    }
+                }
+
+            .navtoggler {
+                .icon-menu, .text-menu {
+                    color: $titlecolor !important;
+                }
+            }
+        }
+    }
+}
+
+
+/*---------------MENU-------------------*/
+.menu {
+    position: fixed;
+    height: 100%;
+    width: 30vw;
+    overflow-y: auto;
+    z-index: 99;
+    
+    @include respond-below(md) {
+        width: 70vw;
+    }
+
+    top: 0;
+    right: -100%;
+    bottom: 0;
+    background: $menucolor;
+    padding: 3rem;
+    box-shadow: -5px 0px 5px rgba($black, $alpha: .2);
+   /*  border-top-left-radius: 200px; */
+    /* border-bottom-right-radius: 200px; */
+    
+    transition: $transitioncubic;
+
+    &.show-menu {
+        right: 0;
+    }
+
+
+    .close-menu {
+        @include flexCenter(column, center);
+        align-items: flex-start;
+        padding-right: 3rem;
+        margin-bottom: 3rem;
+
+        .icon-close2 {
+            cursor: pointer;
+            font-size: 3rem;
+            color:$authorcolor;
+            transition: $transitioneasy;
+
+            &:hover{
+                color: $hovercolor;
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+    .menu-bar {
+        @include flexCenter(column, center);
+        align-items: flex-start;
+    
+        .nav-list {
+            margin: 0.7rem 0;
+
+            .nav-link {
+                font-size: 1.5rem;
+                color: $bodycolor;
+                text-transform: uppercase;
+                font-family: $sitefont;
+                font-weight: 500;
+                transition: $transitioneasy;
+
+                &:hover {
+                    color: $titlecolor;
+                    margin-left: 2rem;
+                }
+            }
+        }
+    }
+
+}

@@ -1,0 +1,56 @@
+{% load static %}
+<header class="header" id="header">
+    <div class="container">
+      <!--Début Entete du site-->
+      <div class="navbar" id="navbar">
+
+        <div class="navbranding">
+          <a href="{% url 'home' %}" class="navbranda">
+            <img src={% static 'images/hero/hero-avatar.png' %} alt="Photo de Jules Daniel Amoussou" class="img-fluid" title="Jules Daniel Amoussou">
+            <span id="author-name" class="text-uppercase">E-Média Group
+              {% comment %} <span id="author-last"> Amoussou</span> {% endcomment %}
+            </span>
+          </a>
+        </div>
+        <div class="navtoggler">
+          <span class="icon-menu"></span>
+        </div>
+        
+      </div>
+      <!--Fin Entete du site-->
+
+      <!--Début du Menu du site-->
+      <div class="menu">
+        <div class="close-menu">
+          <span class="icon-close2"></span>
+        </div>
+        <ul class="menu-bar" id="menu-bar">
+          <li class="nav-list">
+            <a href="#" class="nav-link">e-media com</a>
+          </li>
+          <li class="nav-list">
+            <a href="#" class="nav-link">Fous Sans Frontières</a>
+          </li>
+          <li class="nav-list">
+            <a href="#" class="nav-link">Inov Press</a>
+          </li>
+          <li class="nav-list">
+            <a href="#" class="nav-link">Blog</a>
+          </li>
+          <li class="nav-list">
+            <a href="#" class="nav-link">Librairie</a>
+          </li>
+          <li class="nav-list">
+            <a href="#" class="nav-link">Demander un devis</a>
+          </li>
+          <li class="nav-list">
+            <a href="#" class="nav-link">Contact</a>
+          </li>
+        </ul>
+        <div class="{% block specialSocial %}social-nav{% endblock specialSocial %}">
+          {% include 'layouts/_social.html' %}
+        </div>
+      </div>
+      <!--Fin du Menu du site-->
+    </div>
+</header>

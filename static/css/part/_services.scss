@@ -1,0 +1,25 @@
+﻿.section-services{
+    background: $bannercolor;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding-top: 3rem;
+    padding-bottom: 5rem;
+
+    .card{
+        min-height: 500px;
+        border-radius: 1rem;
+        overflow: hidden;
+
+        .card-title{
+            font-size: 1.5em;
+            color: $titlecolor;
+            text-align: left;
+            padding-top: 3rem;
+        }
+
+        .card-text{
+            font-size: 1em;
+        }
+    }
+
+}

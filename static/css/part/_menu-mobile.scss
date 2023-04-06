@@ -1,0 +1,106 @@
+﻿.menu {
+    position: fixed;
+    height: 100%;
+    width: 30vw;
+    overflow-y: auto;
+    z-index: 99;
+    
+    @include respond-below(md) {
+        width: 70vw;
+    }
+
+    top: 0;
+    right: -100%;
+    bottom: 0;
+    background: $white;
+    padding: 7rem 3rem;
+    box-shadow: -5px 0px 5px rgba($black, $alpha: .3);
+    // border-top-left-radius: 200px;
+    // border-bottom-right-radius: 200px;
+    
+    transition: all 0.5s cubic-bezier(.92,.01,.05,.98);
+
+    &.show-menu {
+        right: 0;
+    }
+
+
+    .close-menu {
+        @include flexCenter(column, center);
+        align-items: flex-end;
+        padding-right: 3rem;
+        margin-bottom: 3rem;
+
+        .icon-close2 {
+            cursor: pointer;
+            font-size: 3rem;
+            color:$menucolor;
+            transition: $transition;
+
+            &:hover{
+                color: $hovercolor;
+                transform: rotate(360deg);
+            }
+        }
+    }
+
+    .menu-bar {
+        @include flexCenter(column, center);
+        align-items: flex-start;
+    /* 	padding-left: 1rem; */
+
+        .nav-list {
+            margin: 1rem 0;
+
+            .nav-link {
+                font-size: 1.7rem;
+                color: $menucolor;
+                text-transform: uppercase;
+                font-family: $pop;
+                font-weight: 900;
+                transition: $transition;
+
+                &:hover {
+                    color: $hovercolor;
+                    margin-left: 3rem;
+                }
+            }
+        }
+    }
+
+}
+
+.social{
+    @include flexCenter(row, space-evenly);
+    align-items: flex-start;
+
+    a{
+        @include flexCenter(column, center);
+        margin: 1.5rem 0;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: $hovercolor;
+        transition: $transition;
+
+        span{
+            color: $menucolor;
+            font-size: 2.5rem;
+            transition: $transition;
+        }
+
+        &:hover{
+            background: $menucolor;
+            color: $hovercolor;
+
+            & span{
+                color: $hovercolor;
+            }
+        }
+
+        &:hover{
+            margin-top: -1px;
+        }
+    }
+    
+}

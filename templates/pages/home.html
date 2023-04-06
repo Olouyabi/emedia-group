@@ -1,0 +1,293 @@
+﻿{% extends 'layouts/master.html' %}
+{% load static %}
+
+{% block tab_name %}
+EMEDIA GROUP | Accueil
+{% endblock tab_name %}
+
+{% block heroview %}
+
+    <div class="col-lg-4 hero-home"> <!-- DEBUT COL-4 GENERALE-->
+        <div class="container display-flex-col">
+            <div class="hero-author">
+                <img 
+                    class="img-fluid hero-author-img" 
+                    src={% static 'images/hero/hero-avatar.png' %} 
+                    alt="Jules Daniel Amoussou" 
+                    title="Jules Daniel Amoussou"
+                >
+                <div class="hero-info">
+                    <p class="hero-author-hi">
+                        <span >Coucou, je suis Jules Daniel AMOSSOU</span>
+                    </p>
+                </div>
+            </div>
+            <a class="btn emedia-btn" href="#" target="_blank">
+                Consulter mon CV
+            </a>
+        </div>
+    </div> <!-- FIN COL-4 GENERALE-->
+
+    <div class="col-lg-6 hero-right"> <!-- DEBUT COL-8 GENERALE-->
+
+        <div class="hero-intro">
+            <div class="hero-heading">
+                <h1 class="hero-title">Jules Daniel</h1>
+                <span class="hero-subtitle">Amoussou</span>
+            </div>
+            <div class="hero-slogan">
+                <p class="slogan mb-5" id="slogan">
+                    <span class="slogan-span"></span>
+                </p>
+            </div>
+        </div>
+        
+        <div class="{% block specialSocial %} social-hero {% endblock specialSocial %}">
+            {% include 'layouts/_social.html' %}
+        </div>
+        
+        <div class="explorer">
+            <a class="btn emedia-btn" href="#about" id="explore">
+                Explorer
+            </a>
+        </div>
+
+    </div> <!-- FIN COL-8 GENERALE-->
+
+{% endblock heroview %}
+
+{% block content %}
+{% comment %} SECTION ABOUT {% endcomment %}
+    <section class="section-about" id="about">
+        <div class="container">
+            <div class="title-block">
+                <h1 class="title">à propos</h1>
+                {% include 'layouts/_bara.html' %}
+            </div>
+            <div class="row">
+                <div class="col-md-7">
+                    <div class="about-text">
+                        <p class="detail">
+                            Créée par <span class="special">Jules Daniel AMOSSOU</span>, <span class="special">E-media Group</span> est une plateforme de communication, d'édition, de création graphique et d'imprimerie.            
+                        </p>
+                        <p class="detail">
+                            Depuis sa création en 2016, elle n'a cessé d'émerveiller ses divers partenaires à travers des services aussi variés qu'innovants. Nous  vous présentons ici quelques éléments de notre portfolio, nos différents services, nos partenaires, le catalogue de nos parutions, notre blog et bien d'autres contenus de qualité. 
+                        </p>
+                        <p class="detail">
+                            <span class="special">Bienvenue donc dans notre univers fabuleux riche de contenus créatifs. </span>
+                        </p>
+                        <a class="btn emedia-btn mt-5" href="#">
+                            Consulter notre portfolio
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="about-img">
+                        <img src={% static 'images/about/front.png' %} alt="Photo à propos" class="img-fluid front">
+                        <img src={% static 'images/about/back.png' %} alt="Photo à propos" class="img-fluid back">
+                    </div>
+                </div>
+            </div>
+        </div> {% comment %} container {% endcomment %}
+    </section>
+
+{% comment %} SECTION SERVICES {% endcomment %}
+    <section class="section-services" id="services">
+        <div class="container">
+            <div class="title-block">
+                <h1 class="title">Nos Services</h1>
+                {% include 'layouts/_bara.html' %}
+            </div>
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+            {% for service in services  %}
+                <div class="col">
+                <div class="card">
+                    <img src="{{service.imageURL}}" class="card-img-top" alt="{{ service.titre }}">
+                    <div class="card-body">
+                    <h5 class="card-title">
+                        {{ service.titre }}
+                    </h5>
+                    <p class="card-text">
+                        {{ service.contenu }}
+                    </p>
+                    </div>
+                    <a class="btn emedia-btn mt-5" href="#">
+                        En savoir plus
+                    </a>
+                </div>
+                </div>
+            {% endfor %}
+
+    {% comment %} 
+                <div class="col">
+                <div class="card">
+                    <img src={% static 'images/logo/logo_emedia-com.png' %} class="card-img-top" alt="...">
+                    <div class="card-body">
+                    <h5 class="card-title">E-média communication</h5>
+                    <p class="card-text">
+                        Pour tous travaux de création d'image corporative, de conception de matériel publicitaire percutant, d'édition de documents, de retouche de vos images, nous mettons à votre disposition une équipe dynamique.</p>
+                    </div>
+                    <a class="btn emedia-btn mt-5" href="#">
+                        En savoir plus
+                    </a>
+                </div>
+                </div>
+                <div class="col">
+                <div class="card">
+                    <img src={% static 'images/logo/logo_fsf.png' %}  class="card-img-top" alt="...">
+                    <div class="card-body">
+                    <h5 class="card-title">Fous Sans Frontière</h5>
+                    <p class="card-text">
+                        Nous assurons la diffusion et la distribution de vos ouvrages sur tout le territoire national et dans la sous-région grâce à nos partenaires au Togo, Ghana, Côte d’Ivoire, Burkina-Faso, Mali, Sénégal et au Niger.
+                    </p>
+                    </div>
+                    <a class="btn emedia-btn mt-5" href="#">
+                        En savoir plus
+                    </a>
+                </div>
+                </div>
+                <div class="col">
+                <div class="card">
+                    <img src={% static 'images/logo/logo_inov-press.png' %} class="card-img-top" alt="...">
+                    <div class="card-body">
+                    <h5 class="card-title">Inov Press</h5>
+                    <p class="card-text">
+                        Notre parfaite maîtrise des contraintes techniques de l'imprimerie combinée à une créativité originale met en valeur le travail, les compétences et l'image de nos clients.
+                    </p>
+                    </div>
+                    <a class="btn emedia-btn mt-5" href="#">
+                        En savoir plus
+                    </a>
+                </div>
+                </div>
+                {% endcomment %}
+            </div> <!--Fin ROW-->
+        </div> {% comment %} container {% endcomment %}
+    </section>
+
+{% comment %} SECTION PORTFOLIO {% endcomment %}
+    <section class="section-galeries mt-5 sans-mh" id="gallery-section">
+        <div class="container">
+
+            <div class="title-block">
+                <h1 class="title">Notre portfolio</h1>
+                {% include 'layouts/_bara.html' %}
+            </div>
+        
+            <div class="row justify-content-center mb-5">
+            <div id="filters" class="filters text-center button-group col-md-12">
+                <button class="btn btn-primary active" data-filter="*">Tout</button>
+                {% for cat in categories %}
+                    <button class="btn btn-adaniel" data-filter=".{{ cat.slug }}">
+                        {{cat.nom_categorie}}
+                    </button>
+                {% endfor %}
+            </div>
+            </div> 
+
+            <div id="portfolio" class="row no-gutter">                
+                    {% for portfolio in portfolios  %}
+                        <div class="item {{ portfolio.categorie.slug }} col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-4">
+                            <a href="{{portfolio.imageURL}}" class="item-wrap fancybox">
+                                <span class="icon-search2"></span>
+                                <img class="img-fluid" src="{{portfolio.imageURL}}" alt="{{portfolio.nom}}">
+                            </a>
+                        </div>
+                    {% endfor %}    
+            </div>
+        </div>
+    </section> 
+
+{% comment %} SECTION TEMOIGNAGES {% endcomment %}
+    <section class="section-avis sans-mh site-section block-14 nav-direction-white" id="avis">
+        <div class="container pb-5">
+            <div class="title-block">
+                <h1 class="title">Témoignages-clients</h1>
+                {% include 'layouts/_bara.html' %}
+            </div>
+
+            <div class="nonloop-block-14 owl-carousel">
+                {% for temoin in avis %}
+                    <div class="d-block block-testimony mx-auto text-center">
+                        <div class="person w-25 mx-auto mb-4">
+                            <img src="{{temoin.imageURL}}" alt="{{temoin.nom}}" class="img-fluid rounded-circle w-25 mx-auto">
+                        </div>
+                        <div>
+                            <h2 class="h3 mb-1">
+                                {{temoin.nom}}
+                            </h2>
+                            <h4 class="h5 mb-4">
+                                {{temoin.titre}}
+                            </h4>
+                            <blockquote>
+                                &ldquo;
+                                {{temoin.avis}}
+                                &rdquo;
+                            </blockquote>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+
+        </div> {% comment %} container {% endcomment %}
+    </section>
+
+{% comment %} SECTION BlOG {% endcomment %}
+
+<section class="site-section">
+    <div class="container">
+        <div class="title-block">
+            <h1 class="title">Posts récents</h1>
+            {% include 'layouts/_bara.html' %}
+        </div>
+
+        <div class="row">
+
+            {% with posts.count as nb_post %}
+            {% if nb_post == 0 %}
+                <p class="text-center">Aucun post n'est disponible pour le moment !</p>
+            {% else %} 
+            {% for post in posts  %}
+
+                <div class="col-md-6 col-lg-4 mb-5" data-aos="fade-up" data-aos-delay="100">
+                    <div class="media-image">
+                        <a href=" {{post.get_absolute_url}} "><img src="{% static 'images/banners/default-bg-emedia.png' %}" alt="Image" class="img-fluid"></a>
+                        <div class="media-image-body">
+                            <h2 class="text-uppercase">
+                                <a href=" {{post.get_absolute_url}} ">
+                                    {{ post.titre }}
+                                </a>
+                            </h2>
+                            <span class="d-block mb-3 text-muted">Par {{ post.auteur|title }} &mdash; depuis {{post.date_publication|timesince}} </span>
+                            <p>
+                                {{post.contenu | safe | truncatechars:130}}
+                            </p>
+                            <p><a href=" {{post.get_absolute_url}} ">
+                                Lire plus →
+                            </a></p>
+                        </div>
+                    </div>
+                </div>
+
+            {% endfor %}
+            {% endif %} 
+           {% endwith %}
+                  
+           
+           {% with posts.count as nb_post  %}
+                
+                {% if nb_post > 0 %}
+        
+                <div class="blog-redict w-100">
+                    <a href="{% url 'post_list' %}">Faites-y un tour&nbsp;<span>→</span></a>
+                </div>
+                    
+                {% endif %}
+               
+           {% endwith %}
+
+        </div>
+    </div>
+  </section>
+    
+{% endblock content %}

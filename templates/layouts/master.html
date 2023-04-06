@@ -1,0 +1,81 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr-FR">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Favicon-->
+        <link rel="shortcut icon" href=" {% static 'favicon.ico' %} " type="image/x-icon">
+        <link rel="icon" href=" {% static 'logo.ico' %} " type="image/x-icon">
+
+        <!-- Frameworks-->
+        <link rel="stylesheet" href=" {% static 'css/frameworks/bootstrap.min.css' %} "/>
+        <link rel="stylesheet" href=" {% static 'css/frameworks/bootstrap.css' %} "/>
+        <link rel="stylesheet" href=" {% static 'css/frameworks/all.min.css' %} "/>
+        <link rel="stylesheet" href=" {% static 'css/frameworks/owl.carousel.min.css' %} "/>
+        <link rel="stylesheet" href=" {% static 'css/frameworks/aos.css' %}"/>
+        <link rel="stylesheet" href=" {% static 'css/frameworks/bootstrap-datepicker.css' %} "/>
+        <link rel="stylesheet" href=" {% static 'css/frameworks/animate.css' %} "/>
+        <link rel="stylesheet" href=" {% static 'css/frameworks/jquery-ui.css' %} "/>
+        <link rel="stylesheet" href=" {% static 'css/frameworks/jquery.fancybox.min.css' %} "/>
+        <link rel="stylesheet" href=" {% static 'css/frameworks/magnific-popup.css' %} "/>
+        <link rel="stylesheet" href=" {% static 'css/frameworks/owl.theme.default.min.css' %} "/>
+        <link rel="stylesheet" href=" {% static 'css/icons/flaticon/font/flaticon.css' %} "/>
+        <link rel="stylesheet" href=" {% static 'css/icons/icomoon/style.css' %} "/>
+
+        <!-- My styles-->
+        <link rel="stylesheet" href=" {% static 'css/style.css' %} " />
+
+        <!-- Site title-->
+        <title> 
+            {% block tab_name %}
+                    EMEDIA GROUP
+            {% endblock tab_name %}
+        </title>
+    </head>
+
+    <body>
+        {% include 'layouts/_nav.html' %}
+
+        <main class="enveloppe">
+           {% comment %} SECTION HERO {% endcomment %}
+            <section class="sans-mh section-hero hero-right-bg"> <!-- DEBUT ROW GENERALE-->
+                <div class="row hero-row">
+                    {% block heroview %}
+
+                    {% endblock heroview %}
+                </div>
+            </section> <!-- FIN ROW GENERALE-->
+
+            {% block content %}{% endblock content %}
+        </main>
+
+        {% include 'layouts/_footer.html' %}
+
+        {% include 'layouts/_gototop.html' %}
+
+
+        <script src=" {% static 'js/frameworks/jquery-3.6.0.min.js' %}"></script>
+        <script src=" {% static 'js/frameworks/jquery-ui.js' %}"></script>
+        <script src=" {% static 'js/frameworks/bootstrap.min.js' %}"></script>
+        <script src=" {% static 'js/frameworks/bootstrap.js' %}"></script>
+        <script src=" {% static 'js/frameworks/all.min.js' %}"></script>
+        <script src=" {% static 'js/frameworks/aos.js' %}"></script>
+        <script src=" {% static 'js/frameworks/bootstrap-datepicker.min.js' %}"></script>
+        <script src=" {% static 'js/frameworks/isotope.pkgd.min.js' %}"></script>
+        <script src=" {% static 'js/frameworks/owl.carousel.min.js' %}"></script>
+        <script src=" {% static 'js/frameworks/core.js' %}"></script>
+        <script src=" {% static 'js/frameworks/jquery.fancybox.min.js' %}"></script>
+        <script src=" {% static 'js/frameworks/galery.js' %}"></script>
+        <script src=" {% static 'js/frameworks/plugins.js' %}"></script>
+        <script src=" {% static 'js/frameworks/jquery.stellar.js' %}"></script>
+
+         <!-- My scripts -->
+        <script src=" {% static 'js/typewriter.js' %}"></script>
+        <script src=" {% static 'js/script.js' %}"></script>
+        
+    </body>
+</html>
