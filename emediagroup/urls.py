@@ -19,7 +19,7 @@ from django.urls import path, include
 from . import views
 from emediagroup.settings import STATIC_URL
 from . import settings
-from django.contrib.staticfiles.urls import static, staticfiles_urlpatterns
+from django.contrib.staticfiles.urls import static, staticfiles_urlpatterns # type: ignore
 from django.views.generic.base import RedirectView
 
 
@@ -33,9 +33,13 @@ urlpatterns = [
         "favicon.ico",
         RedirectView.as_view(url=staticfiles_storage.url("favicon.ico")),
     ),
+    path('editor/', include('django_summernote.urls')),
+    # path('djrichtextfield/', include('djrichtextfield.urls')),
 ]
 
-
 urlpatterns += staticfiles_urlpatterns()
-urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+# add condition in django urls file
+if settings.DEBUG:
+	urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
+
 

@@ -1,6 +1,7 @@
 from django.db import models
 from emediagroup import utilitaires
-
+# from djrichtextfield.models import RichTextField
+from ckeditor.fields import RichTextField
 
 # Create your models here.
 
@@ -8,7 +9,7 @@ class Services(models.Model):
     titre = models.CharField(max_length=200)
     slug = models.SlugField(max_length=200)
     image = models.ImageField(upload_to='services', default='services/logo_emedia-com.png')
-    contenu = models.TextField()
+    contenu = RichTextField()
     date_creation = models.DateTimeField(auto_now_add=True)
     status = models.CharField(choices=utilitaires.STATUS, default="actu", max_length=50)
 

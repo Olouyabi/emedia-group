@@ -6,80 +6,75 @@ EMEDIA GROUP | Blog
 {% endblock tab_name %}
 
 {% block heroview %}
-    
-<div class="col-lg-4 hero-pages"> <!-- DEBUT COL-4 GENERALE-->
-  <img 
-      class="img-fluid hero-author-img" 
-      src="{% static 'images/hero/hero-post.png' %}"
-      alt="Jules Daniel Amoussou" 
-      title="Jules Daniel Amoussou"
-  >
-  
-</div> <!-- FIN COL-4 GENERALE-->
 
-<div class="col-lg-7 hero-right text-left"> <!-- DEBUT COL-8 GENERALE-->
+<div class="row row-page">
 
-  <div class="hero-intro">
-      <div class="hero-heading">
-          <h1 class="hero-title">Notre</h1>
-          <span class="hero-subtitle">Blog</span>
-      </div>
-  </div>
-  
-  <div class="explorer">
-      <a class="btn emedia-btn" href="#blog" id="explore">
-          Explorer
-      </a>
-  </div>
+    <div class="col-lg-4 hero-pages"> <!-- DEBUT COL-4 GENERALE-->
+      <img 
+          class="img-fluid hero-author-img" 
+          src="{% static 'images/hero/hero-post.png' %}"
+          alt="Jules Daniel Amoussou" 
+          title="Jules Daniel Amoussou"
+      >
+    </div> <!-- FIN COL-4 GENERALE-->
 
-</div> <!-- FIN COL-8 GENERALE-->
+    <div class="col-lg-7 hero-right"> <!-- DEBUT COL-8 GENERALE-->
+        <div class="hero-heading">
+            <h1 class="hero-title">Notre</h1>
+            <p class="hero-subtitle">Blog</p>
+            <a class="btn emedia-btn" href="#blog" id="explore">Explorer</a>
+        </div>
+    </div> <!-- FIN COL-8 GENERALE-->
+                        
+</div>
+
 {% endblock heroview %}
 
 {% block content %}
   <div class="container my-5 py-5">
-    <div class="row post">
-      <!-- Blog entries-->
-      <div class="col-lg-8">
-        <!-- Nested row for non-featured blog posts-->
-        <div class="row">
-          {% with posts.count as nb_post %}
-              {% if nb_post == 0 %}
-                  <p class="text-center">Aucun post n'est disponible pour le moment !</p>
-              {% else %} 
-                  {% for post in posts %}
-                  <div class="col-lg-6">
-                  <!-- Blog post-->
-                  <div class="card h-100 mb-4">
-                      <a href="{{post.get_absolute_url}}"
-                      ><img
-                          class="card-img-top"
-                          src="{% static 'assets/imgs-blog/blog-post-bg.png' %}"
-                          alt="image illustrant la publication"
-                          title="Lire plus →"
-                      /></a>
-                      <div class="card-body">
-                      <div class="small text-muted">Posté depuis {{post.date_publication|timesince}}</div>
-                      <h2 class="card-title post-title">{{post.titre}}</h2>
-                      <p class="card-text">
-                          <!-- {{ post.contenu | safe }} -->
-                          {{post.contenu | safe | truncatechars:150}}
-                      </p>
-                      <a class="btn btn-primary" href=" {{post.get_absolute_url}} ">
-                          Lire plus →
-                      </a>
-                      </div>
-                  </div>
-                  </div>
-                  {% endfor %} 
-              {% endif %} 
-          {% endwith %}
+      <div class="row post">
+        <!-- Blog entries-->
+        <div class="col-lg-8">
+          <!-- Nested row for non-featured blog posts-->
+          <div class="row">
+            {% with posts.count as nb_post %}
+                {% if nb_post == 0 %}
+                    <p class="text-center">Aucun post n'est disponible pour le moment !</p>
+                {% else %} 
+                    {% for post in posts %}
+                    <div class="col-lg-6">
+                    <!-- Blog post-->
+                    <div class="card h-100 mb-4">
+                        <a href="{{post.get_absolute_url}}"
+                        ><img
+                            class="card-img-top"
+                            src="{% static 'images/banners/default-bg-emedia.png' %}"
+                            alt="image illustrant la publication"
+                            title="Lire plus →"
+                        /></a>
+                        <div class="card-body">
+                        <div class="small text-muted">Posté depuis {{post.date_publication|timesince}}</div>
+                        <h2 class="card-title post-title">{{post.titre}}</h2>
+                        <p class="card-text">
+                            <!-- {{ post.contenu | safe }} -->
+                            {{post.contenu | safe | truncatechars:150}}
+                        </p>
+                        <a class="btn btn-primary" href=" {{post.get_absolute_url}} ">
+                            Lire plus →
+                        </a>
+                        </div>
+                    </div>
+                    </div>
+                    {% endfor %} 
+                {% endif %} 
+            {% endwith %}
+          </div>
+          <!-- Pagination-->
+          {% include 'layouts/_pagination.html' with page=posts %}
         </div>
-        <!-- Pagination-->
-        {% include 'layouts/_pagination.html' with page=posts %}
+        <!-- Side widgets-->
+        {% include 'layouts/_blog-side-widgets.html' %}
       </div>
-      <!-- Side widgets-->
-      {% include 'layouts/_blog-side-widgets.html' %}
-    </div>
   </div>
 
 {% endblock content %}

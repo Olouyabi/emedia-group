@@ -1,4 +1,3 @@
-from multiprocessing import context
 from django.shortcuts import get_object_or_404, render
 from blog.models import Post
 from portfolio.models import CategoriePortfolio, Portfolios
@@ -22,7 +21,6 @@ def home(request, category=None):
         'portfolios': portfolios,
         'avis' : avis,
         'posts' : posts,
-
     }
 
     

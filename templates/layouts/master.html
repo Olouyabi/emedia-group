@@ -43,11 +43,9 @@
         <main class="enveloppe">
            {% comment %} SECTION HERO {% endcomment %}
             <section class="sans-mh section-hero hero-right-bg"> <!-- DEBUT ROW GENERALE-->
-                <div class="row hero-row">
-                    {% block heroview %}
-
-                    {% endblock heroview %}
-                </div>
+                {% block heroview %}
+                    
+                {% endblock heroview %}
             </section> <!-- FIN ROW GENERALE-->
 
             {% block content %}{% endblock content %}

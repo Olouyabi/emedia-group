@@ -714,7 +714,7 @@ section.sans-mh {
   margin-left: 2rem;
 }
 
-.hero-row {
+.hero-row, .row-page {
   width: 100%;
   height: 100vh;
   overflow-x: hidden;
@@ -727,14 +727,14 @@ section.sans-mh {
   /*--------Partie gauche de Hero------*/
   /*--------Partie droite de Hero------*/
 }
-.hero-row .hero-home {
+.hero-row .hero-home, .row-page .hero-home {
   background-image: url(../images/banners/africa_colors10.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   background-attachment: scroll;
 }
-.hero-row .hero-home .hero-author {
+.hero-row .hero-home .hero-author, .row-page .hero-home .hero-author {
   width: 100%;
   margin-top: 8rem;
   display: flex;
@@ -742,12 +742,12 @@ section.sans-mh {
   justify-content: center;
   align-items: center;
 }
-.hero-row .hero-home .hero-author img {
+.hero-row .hero-home .hero-author img, .row-page .hero-home .hero-author img {
   width: 300px;
   margin-bottom: -2rem;
   z-index: 2;
 }
-.hero-row .hero-home .hero-author .hero-info {
+.hero-row .hero-home .hero-author .hero-info, .row-page .hero-home .hero-author .hero-info {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -760,7 +760,7 @@ section.sans-mh {
   z-index: 1;
   box-shadow: rgba(14, 30, 37, 0.082) 0px 2px 4px 0px, rgba(14, 30, 37, 0.062) 0px 2px 16px 0px;
 }
-.hero-row .hero-home .hero-author .hero-info .hero-author-hi {
+.hero-row .hero-home .hero-author .hero-info .hero-author-hi, .row-page .hero-home .hero-author .hero-info .hero-author-hi {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -772,7 +772,7 @@ section.sans-mh {
   border-radius: 0.5rem;
   padding-top: 2rem;
 }
-.hero-row .hero-home .hero-author .hero-info .hero-author-hi span {
+.hero-row .hero-home .hero-author .hero-info .hero-author-hi span, .row-page .hero-home .hero-author .hero-info .hero-author-hi span {
   font-size: 1.5em;
   color: #181222;
   font-weight: 700;
@@ -780,7 +780,15 @@ section.sans-mh {
   line-height: 30px;
   text-align: center;
 }
-.hero-row .hero-right {
+.hero-row .hero-pages, .row-page .hero-pages {
+  padding-top: 10rem;
+}
+@media (max-width: 767px) {
+  .hero-row .hero-pages, .row-page .hero-pages {
+    padding-top: 8rem;
+  }
+}
+.hero-row .hero-right, .row-page .hero-right {
   margin: 0 !important;
   padding: 0 !important;
   display: flex;
@@ -788,28 +796,7 @@ section.sans-mh {
   justify-content: center;
   align-items: center;
 }
-.hero-row .hero-right .hero-intro {
-  z-index: 3;
-  position: relative;
-  margin-top: 5%;
-  /* margin-left: 40px; */
-}
-@media (max-width: 991px) {
-  .hero-row .hero-right .hero-intro {
-    margin-top: 80%;
-    /* margin-left: -80%; */
-  }
-}
-@media (max-width: 767px) {
-  .hero-row .hero-right .hero-intro {
-    margin-top: 0;
-    /*  margin-left: 2rem; */
-  }
-}
-.hero-row .hero-right .hero-intro .hero-heading {
-  /*   margin-left: -100px; */
-}
-.hero-row .hero-right .hero-intro .hero-heading .hero-title {
+.hero-row .hero-right .hero-heading .hero-title, .row-page .hero-right .hero-heading .hero-title {
   font-size: 70px;
   color: #FF5500;
   font-weight: 500;
@@ -817,24 +804,24 @@ section.sans-mh {
   font-family: "Farringdon";
 }
 @media (max-width: 991px) {
-  .hero-row .hero-right .hero-intro .hero-heading .hero-title {
+  .hero-row .hero-right .hero-heading .hero-title, .row-page .hero-right .hero-heading .hero-title {
     font-size: 80px;
     line-height: 50px;
   }
 }
 @media (max-width: 767px) {
-  .hero-row .hero-right .hero-intro .hero-heading .hero-title {
+  .hero-row .hero-right .hero-heading .hero-title, .row-page .hero-right .hero-heading .hero-title {
     font-size: 60px;
     line-height: 30px;
   }
 }
-.hero-row .hero-right .hero-intro .hero-heading .hero-title.homeless-h {
+.hero-row .hero-right .hero-heading .hero-title.homeless-h, .row-page .hero-right .hero-heading .hero-title.homeless-h {
   font-size: 7rem;
   color: #fff;
   font-weight: 700;
 }
-.hero-row .hero-right .hero-intro .hero-heading .hero-subtitle {
-  font-size: 8rem;
+.hero-row .hero-right .hero-heading .hero-subtitle, .row-page .hero-right .hero-heading .hero-subtitle {
+  font-size: 7rem;
   color: #181222;
   text-transform: uppercase;
   line-height: 15px;
@@ -843,60 +830,62 @@ section.sans-mh {
   font-weight: 900;
 }
 @media (max-width: 991px) {
-  .hero-row .hero-right .hero-intro .hero-heading .hero-subtitle {
+  .hero-row .hero-right .hero-heading .hero-subtitle, .row-page .hero-right .hero-heading .hero-subtitle {
     font-size: 5.2rem;
     color: #FF5500;
     line-height: 60px;
   }
 }
 @media (max-width: 767px) {
-  .hero-row .hero-right .hero-intro .hero-heading .hero-subtitle {
+  .hero-row .hero-right .hero-heading .hero-subtitle, .row-page .hero-right .hero-heading .hero-subtitle {
     font-size: 4rem;
   }
 }
-.hero-row .hero-right .hero-intro .hero-heading .hero-subtitle.homeless-span {
+.hero-row .hero-right .hero-heading .hero-subtitle.homeless-span, .row-page .hero-right .hero-heading .hero-subtitle.homeless-span {
   text-transform: uppercase;
   font-size: 80px;
   color: #9e3a1f;
   font-weight: 900;
   line-height: 20px;
 }
-.hero-row .hero-right .hero-intro .hero-slogan {
+.hero-row .hero-right .hero-heading.prime-hero, .row-page .hero-right .hero-heading.prime-hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.hero-row .hero-right .hero-slogan, .row-page .hero-right .hero-slogan {
   margin-top: 2rem;
 }
-.hero-row .hero-right .hero-intro .hero-slogan .slogan {
+.hero-row .hero-right .hero-slogan .slogan, .row-page .hero-right .hero-slogan .slogan {
   font-size: 3rem;
   color: #181222 !important;
   text-align: center;
   font-family: "Oxtiger";
 }
 @media (max-width: 991px) {
-  .hero-row .hero-right .hero-intro .hero-slogan .slogan {
+  .hero-row .hero-right .hero-slogan .slogan, .row-page .hero-right .hero-slogan .slogan {
     font-size: 2rem;
   }
 }
 @media (max-width: 767px) {
-  .hero-row .hero-right .hero-intro .hero-slogan .slogan {
+  .hero-row .hero-right .hero-slogan .slogan, .row-page .hero-right .hero-slogan .slogan {
     font-size: 1.8rem;
   }
 }
-.hero-row .hero-right .hero-intro .hero-slogan .slogan.homeless-p {
+.hero-row .hero-right .hero-slogan .slogan.homeless-p, .row-page .hero-right .hero-slogan .slogan.homeless-p {
   font-size: 5rem;
   line-height: 40px;
   color: #9e3a1f !important;
 }
-.hero-row .hero-right .explorer {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+@media (max-width: 767px) {
+  .hero-row .hero-right, .row-page .hero-right {
+    display: none;
+  }
 }
-.hero-row .hero-right .hero-right-bg {
-  background-image: url(../images/banners/africa_colorsangle.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: right !important;
+
+.row-page {
+  height: 90vh !important;
 }
 
 #social .titre > h2 {
@@ -1286,65 +1275,6 @@ section.sans-mh {
 }
 .block-testimony h4 {
   color: #FF8321;
-}
-
-.youtube {
-  margin-top: 5rem !important;
-}
-.youtube .bg-youtube {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-}
-.youtube .bg-youtube .bg-cover {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  height: 150px;
-  background: url("./../../src/img/partenaires/bg_clients-5.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top;
-  background-attachment: scroll;
-}
-@media (max-width: 991px) {
-  .youtube .bg-youtube .bg-cover {
-    height: 300px;
-  }
-}
-.youtube .bg-youtube .bg-cover .yt-p {
-  font-size: 2.3rem;
-  margin-top: 2.3rem;
-  color: #fff;
-}
-@media (max-width: 991px) {
-  .youtube .bg-youtube .bg-cover .yt-p {
-    width: 90%;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-  }
-}
-.youtube .bg-youtube .yt {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: -8rem;
-  width: 100%;
-}
-@media (max-width: 991px) {
-  .youtube .bg-youtube .yt {
-    margin-top: -10rem;
-  }
-}
-@media (max-width: 767px) {
-  .youtube .bg-youtube .yt iframe {
-    width: 98%;
-    height: 100%;
-  }
 }
 
 .item {

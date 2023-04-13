@@ -1,5 +1,5 @@
 from django.contrib import admin
-
+from django_summernote.admin import SummernoteModelAdmin
 
 # Titre du site d'administration
 admin.site.site_header = "E-media Group | Administration"

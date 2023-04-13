@@ -1,8 +1,9 @@
-.hero-row {
+.hero-row, .row-page {
   @include sectionView ;
   background-image: url(../images/banners/africa_colorsangle.png);
   @include imageConfig;
 
+  
   /*--------Partie gauche de Hero------*/
   .hero-home {
     background-image: url(../images/banners/africa_colors10.svg);
@@ -51,122 +52,108 @@
     }
   }
 
+  .hero-pages{
+    padding-top: 10rem;
+    @include respond-below(sm) {
+      padding-top: 8rem;
+    }
+  }
+
   /*--------Partie droite de Hero------*/
   .hero-right {
     margin: 0 !important;
     padding: 0 !important;
     @include flexCenter(column, center);
-  
-    .hero-intro {
-      z-index: 3;
-      position: relative;
-      margin-top: 5%;
-      /* margin-left: 40px; */
 
-      @include respond-below(md) {
-        margin-top: 80%;
-        /* margin-left: -80%; */
+    
+    .hero-heading {
+      .hero-title {
+        font-size: 70px;
+        color: $titlecolor;
+        font-weight: 500;
+        letter-spacing: 0.6rem;
+        font-family: $sitefont;
+
+        @include respond-below(md) {
+          font-size: 80px;
+          line-height: 50px;
+        }
+
+        @include respond-below(sm) {
+          font-size: 60px;
+          line-height: 30px;
+        }
+
+        &.homeless-h {
+          font-size: 7rem;
+          color: $white;
+          font-weight: 700;
+        }
       }
 
-      @include respond-below(sm) {
-        margin-top: 0;
-       /*  margin-left: 2rem; */
-      }
+      .hero-subtitle {
+        font-size: 7rem;
+        color: $primecolor;
+        text-transform: uppercase;
+        line-height: 15px;
+        font-family: $sitefont;
+        letter-spacing: 0.5rem;
+        font-weight: 900;
 
-      .hero-heading {
-        /*   margin-left: -100px; */
-
-        .hero-title {
-          font-size: 70px;
+        @include respond-below(md) {
+          font-size: 5.2rem;
           color: $titlecolor;
-          font-weight: 500;
-          // line-height: 10px;
-          letter-spacing: 0.6rem;
-          font-family: $sitefont;
-
-          @include respond-below(md) {
-            font-size: 80px;
-            line-height: 50px;
-          }
-
-          @include respond-below(sm) {
-            font-size: 60px;
-            line-height: 30px;
-          }
-
-          &.homeless-h {
-            font-size: 7rem;
-            color: $white;
-            font-weight: 700;
-          }
+          line-height: 60px;
         }
 
-        .hero-subtitle {
-          font-size: 8rem;
-          color: $primecolor;
+        @include respond-below(sm) {
+          font-size: 4rem;
+        }
+
+        &.homeless-span {
           text-transform: uppercase;
-          line-height: 15px;
-          font-family: $sitefont;
-          letter-spacing: 0.5rem;
+          font-size: 80px;
+          color: $hovercolor;
           font-weight: 900;
-
-          @include respond-below(md) {
-            font-size: 5.2rem;
-            color: $titlecolor;
-            line-height: 60px;
-          }
-
-          @include respond-below(sm) {
-            font-size: 4rem;
-          }
-
-          &.homeless-span {
-            text-transform: uppercase;
-            font-size: 80px;
-            color: $hovercolor;
-            font-weight: 900;
-            line-height: 20px;
-          }
+          line-height: 20px;
         }
       }
+      &.prime-hero{
+        @include flexCenter(column, center);
+      }
+    }
 
-      .hero-slogan {
-        margin-top: 2rem;
-        .slogan {
-          font-size: 3rem;
-          color: $primecolor !important;
-          text-align: center;
-          font-family: $titlefont;
+    .hero-slogan {
+      margin-top: 2rem;
+      .slogan {
+        font-size: 3rem;
+        color: $primecolor !important;
+        text-align: center;
+        font-family: $titlefont;
 
-         
-          @include respond-below(md) {
-            font-size: 2rem;
-          }
+       
+        @include respond-below(md) {
+          font-size: 2rem;
+        }
 
-          @include respond-below(sm) {
-            font-size: 1.8rem;
-          }
+        @include respond-below(sm) {
+          font-size: 1.8rem;
+        }
 
-          &.homeless-p {
-            font-size: 5rem;
-            line-height: 40px;
-            color: $hovercolor !important;
-          }
+        &.homeless-p {
+          font-size: 5rem;
+          line-height: 40px;
+          color: $hovercolor !important;
         }
       }
     }
-      .explorer{
-        width: 100%;
-        @include flexCenter(column, center);
   
-      }
-
-    .hero-right-bg{
-      background-image: url(../images/banners/africa_colorsangle.svg);
-      background-repeat: no-repeat;
-      background-size: cover;
-      // background-attachment: scroll;
-      background-position: right !important;
+    @include respond-below(sm) {
+      display: none;
     }
   }
+}
+
+.row-page{
+  height: 90vh !important;
 }

@@ -2,9 +2,11 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.utils import timezone
 from ckeditor.fields import RichTextField
-# from tinymce.models import HTMLField
 # from tinymce import models as tinymce_models
 from django.urls import reverse
+# from djrichtextfield.models import RichTextField
+from tinymce.models import HTMLField
+
 
 
 class PublishedManager(models.Manager):
@@ -27,6 +29,7 @@ class Post(models.Model):
     categorie_post = models.ManyToManyField(CategorieDePost, related_name="categorie_posts")
     titre = models.CharField(max_length=200)
     slug = models.SlugField(max_length=200)
+    # contenu = models.TextField()
     contenu = RichTextField()
     # contenu = tinymce_models.HTMLField()
     image = models.ImageField(upload_to='blogs', default='images/banners/default-bg-emedia.png')
