@@ -1,124 +1,132 @@
-﻿{% extends 'base.html' %}
+﻿{% extends 'layouts/master.html' %} 
 {% load static %}
 
-{% block subtitle %} Blog+ {% endblock subtitle %}
+{% block tab_name %}
+    Blog - {{ post.titre }}
+{% endblock tab_name %}
+
 {% block heroview  %}
-<div class="container px-5">
-    <div class="row gx-5 align-items-center justify-content-center">
-        <div class="col-lg-12 col-xl-12 col-xxl-12">
-            <div class="my-5 text-center text-xl-start">
-                <h1 class="display-5 fw-bolder hero-title mb-3 text-center">
-                    Bienvenue sur le blog du livre !
-                </h1>
+    <div class="container">
+        <div class="row row-post-detail">
+            <div class="col-12 ">
+                <p class="hero-post-title">{{post.titre}}</p>
+                <p class="hero-direct mt-5">
+                    <span class="mr-2">
+                        <a href="{% url 'post_list' %}">Blog 
+                            <span class="icon-navigate_before">
+                            </span>
+                        </a>
+                    </span> 
+                    <span class="red">{{post.titre|truncatewords:4}}
+                    </span>
+                </p>
             </div>
         </div>
     </div>
-</div>
 {% endblock heroview %}
 
 {% block content %}
-<div class="container mt-5">
-    <div class="row">
-        <div class="col-lg-8">
-            <!-- Post content-->
-            <article>
-                <!-- Post header-->
-                <header class="mb-4">
-                    <!-- Post title-->
-                    <h1 class="fw-bolder mb-1 text-mecnex blog-detail-h1">
-                        {{ post.titre }}
-                    </h1>
-                    <!-- Post meta content-->
-                    <div class="text-muted fst-italic mb-2">
-                        Posté le {{ post.date_publication }} par {{post.auteur.first_name}} {{post.auteur.last_name}}
-                    </div>
-                    <!-- Post categories-->
-                    <span class="badge bg-secondary text-decoration-none link-light">Inventaire des matières</span>
-                </header>
-                <!-- Preview image figure-->
-                <figure class="mb-4">
-                    <img class="img-fluid rounded" src="{% static 'assets/imgs-blog/post-detail-bg.jpg' %}" alt="..." />
-                </figure>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-lg-8">
                 <!-- Post content-->
-                <section class="mb-5 blog-bodies">
-                    <p class="mb-4 blog-body">
-                        {{ post.contenu|safe }}
-                    </p>
-                </section>
-
-                <!--Back to blog -->
-                <p class="text-center mt-5 mb-5">
-                  <a href="{% url 'post_list' %}">
-                      Revenir sur l'accueil du blog →
-                  </a>
-                </p>
-
-            </article>
-            <!-- Comments section-->
-            <section class="mb-5">
-                <div class="card comment-card bg-light">
-                    <div class="card-body">
-                        <!-- Comment form-->
-
-                        <h3 class="status-comment">
-                            Veuillez laisser votre commentaire
-                        </h3>
-                        <form class="mb-4" action="" method="post">
-                            {% csrf_token %}
-                            {{ comment_form.media }}
-                            {{comment_form.as_p}}
-
-                            <button class="btn btn-ne" type="submit" id="comment-sender">Soumettre</button>
-                        </form>
-
-                        {% for message in messages %}
-                        
-                            {% if message.tags == 'success' %}
-                                <script src=" {% static 'js/sweetalert.min.js' %} "></script>
-                                <script>
-                                    var m = " {{ message }} ";
-                                    swal('Merci bien !', m, "success")
-                                </script>
-                            {% endif %}
-                        {% endfor %}
-
-                        <h2 class="comment-count py-2">
-                            {% with commentaires.count as total_comments %}
-
-                            {% if total_comments == 0 %}
-                            {{total_comments}} commentaire
-                            {% else %}
-                            {{total_comments}} commentaire{{total_comments|pluralize}}
-                            {% endif %}
-
-                            {% endwith %}
-                        </h2>
-                        <!-- Single comment-->
-                        {% for comment in commentaires %}
-                        <div class="d-flex mb-3">
-                            <div class="flex-shrink-0"><img class="rounded-circle"
-                                    src="{% static 'assets/imgs-ne-cme/des-ne.png' %}" alt="Avatar du commentataire" width="30px" height="30px"/>
-                            </div>
-                            <div class="ms-3">
-                                <div class="fw-bold">{{comment.commentataire}}</div>
-                                <h5 class="commment-date">{{comment.modification}}</h5>
-                                <p class="comment-body">{{comment.commentaire|safe}}</p>
-                            </div>
+                <article>
+                    <!-- Post header-->
+                    <header class="mb-4">
+                        <!-- Post title-->
+                        <h1 class="fw-bolder mb-1 text-mecnex blog-detail-h1">
+                            {{ post.titre }}
+                        </h1>
+                        <!-- Post meta content-->
+                        <div class="text-muted fst-italic mb-2">
+                            Posté le {{ post.date_publication }} par {{post.auteur.first_name}} {{post.auteur.last_name}}
                         </div>
-                        
-                        {% if not forloop.last %}
-                          <div class="them-separe mb-3"></div>
-                        {% endif %}
-                        {% empty %}
-                          <p>Aucun commentaire n'est disponible pour cet article pour le moment</p>
-                        {% endfor %}
+                        <!-- Post categories-->
+                        <span class="badge bg-secondary text-decoration-none link-light">Inventaire des matières</span>
+                    </header>
+                    <!-- Preview image figure-->
+                    <figure class="mb-4">
+                        <img class="img-fluid rounded" src="{% static 'assets/imgs-blog/post-detail-bg.jpg' %}" alt="..." />
+                    </figure>
+                    <!-- Post content-->
+                    <section class="mb-5 blog-bodies">
+                        <p class="mb-4 blog-body">
+                            {{ post.contenu|safe }}
+                        </p>
+                    </section>
 
+                    <!--Back to blog -->
+                    <p class="text-center mt-5 mb-5">
+                    <a href="{% url 'post_list' %}">
+                        Revenir sur l'accueil du blog →
+                    </a>
+                    </p>
+
+                </article>
+                <!-- Comments section-->
+                <section class="mb-5">
+                    <div class="card comment-card bg-light">
+                        <div class="card-body">
+                            <!-- Comment form-->
+
+                            <h3 class="status-comment">
+                                Veuillez laisser votre commentaire
+                            </h3>
+                            <form class="mb-4" action="" method="post">
+                                {% csrf_token %}
+                                {{ comment_form.media }}
+                                {{comment_form.as_p}}
+
+                                <button class="btn btn-ne" type="submit" id="comment-sender">Soumettre</button>
+                            </form>
+
+                            {% for message in messages %}
+                            
+                                {% if message.tags == 'success' %}
+                                    <script src=" {% static 'js/sweetalert.min.js' %} "></script>
+                                    <script>
+                                        var m = " {{ message }} ";
+                                        swal('Merci bien !', m, "success")
+                                    </script>
+                                {% endif %}
+                            {% endfor %}
+
+                            <h2 class="comment-count py-2">
+                                {% with commentaires.count as total_comments %}
+                                    {% if total_comments == 0 %}
+                                        {{total_comments}} commentaire
+                                        {% else %}
+                                        {{total_comments}} commentaire{{total_comments|pluralize}}
+                                    {% endif %}
+                                {% endwith %}
+                            </h2>
+                            <!-- Single comment-->
+                            {% for comment in commentaires %}
+                            <div class="d-flex mb-3">
+                                <div class="block-avatar-comment">
+                                    <h2 class="avatar-comment">
+                                        {{comment.commentataire|first}}
+                                    </h2>
+                                </div>
+                                <div class="ms-3">
+                                    <div class="fw-bold">{{comment.commentataire}}</div>
+                                    <h5 class="commment-date text-muted fst-italic mb-2">{{comment.modification}}</h5>
+                                    <p class="comment-body">{{comment.commentaire|safe}}</p>
+                                </div>
+                            </div>
+                            
+                            {% if not forloop.last %}
+                            <div class="them-separe mb-3"></div>
+                            {% endif %}
+                            {% empty %}
+                            <p>Aucun commentaire n'est disponible pour cet article pour le moment</p>
+                            {% endfor %}
+
+                        </div>
                     </div>
-                </div>
-            </section>
-        </div>
-         <!-- Side widgets-->
-        {% include 'layout/blog-side-widgets.html' %}
-</div>
-
+                </section>
+            </div>
+            <!-- Side widgets-->
+            {% include 'layouts/_blog-side-widgets.html' %}
+    </div>
 {% endblock content %}

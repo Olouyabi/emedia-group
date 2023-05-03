@@ -2,17 +2,18 @@
 {% load static %}
 
 {% block tab_name %}
-EMEDIA GROUP | Accueil
+EMEDIA GROUP - Accueil
 {% endblock tab_name %}
 
 {% block heroview %}
 <div class="row hero-row">
+
     <div class="col-lg-4 hero-home"> <!-- DEBUT COL-4 GENERALE-->
         <div class="container display-flex-col">
             <div class="hero-author">
                 <img 
                     class="img-fluid hero-author-img" 
-                    src={% static 'images/hero/hero-avatar.png' %} 
+                    src="{% static 'images/hero/hero-avatar.png' %}" 
                     alt="Jules Daniel Amoussou" 
                     title="Jules Daniel Amoussou"
                 >
@@ -51,6 +52,7 @@ EMEDIA GROUP | Accueil
         </div>
 
     </div> <!-- FIN COL-8 GENERALE-->
+    
 </div>
 {% endblock heroview %}
 

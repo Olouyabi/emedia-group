@@ -1,0 +1,54 @@
+#adaniel-footer, .push{
+    // padding-top: 3rem;
+    background-color: $primecolor;
+    color: $bodycolor;
+    font-size: 1em;
+}
+
+    .adaniel-footer{
+        ul {
+		li {
+			line-height: 1;
+			margin-bottom: 10px;
+			display: block;
+		    }
+	    }
+
+        .footer-heading {
+		font-size: 20px;
+		color: $white;
+	    }
+
+            a{
+                color: rgba(255, 129, 33, 0.337);
+                }
+                    p{
+                        color: rgba(255, 255, 255, 0.337);
+                        }
+}
+
+
+    .form-subscribe {
+	.btn {
+		&.btn-adaniel {
+            background: rgb(255, 129, 33)!important;
+            color: $primecolor;
+            font-size: 1.2em;
+            border-top-right-radius:  $bradius;
+            border-bottom-right-radius:  $bradius;
+            height: 35px;
+            border: none;
+			&:hover, &:active, &:focus {
+				background: rgba(255, 129, 33, 0.808)!important;
+             
+			}
+		}
+	}
+
+        .form-control{
+            height: 35px;
+            font-size: 1.1em;
+            border-top-left-radius:  $bradius;
+            border-bottom-left-radius:  $bradius;
+            }
+}

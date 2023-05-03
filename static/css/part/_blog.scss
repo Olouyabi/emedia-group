@@ -1,5 +1,4 @@
-/* Blog */
-// sidebar
+
 .sidebar-box {
 	margin-bottom: 30px;
 	padding: 25px;
@@ -192,4 +191,24 @@
 		}
 	}
 
+.block-avatar-comment{
+	@include flexCenter(column, center);
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	color: $primecolor;
+	background-color: $titlecolor;
 
+	.avatar-comment{
+		font-size: 1.5em;
+	}
+}
+
+.row-post-detail{
+	@include flexCenter(column, center);
+	margin-top: 20%;
+
+	.hero-post-title{
+		font-size: 3em;
+	}
+}

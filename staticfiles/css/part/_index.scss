@@ -1,0 +1,78 @@
+
+#social{
+	
+
+	.titre{
+		& > h2{
+			font-size: 4rem;
+			font-weight: 700;
+			color: $black !important;
+
+			&::before{
+				background-color: $menucolor !important;
+			}
+		}
+
+		& > p{
+			color: $black;
+			font-size: 2rem;
+
+			span{
+				color: $menucolor;
+				text-transform: uppercase;
+				font-weight: 700;
+
+				&.icon-whatsapp{
+					color: rgba(0, 128, 0, 0.5);
+					font-size: 2rem;
+					padding-left: 0.5rem;
+					transition: color .2s ease;
+				}
+			}
+
+			.rdv{
+				color: rgba(0, 128, 0, 0.5);
+				transition: color .2s ease;
+				
+
+				&:hover, &:hover .icon-whatsapp{
+					color: green;
+				}	
+
+			}
+
+			.geoloca{
+				color: rgba($menucolor, .6);
+				font-weight: 500;
+				transition: color .2s ease;
+
+				&:hover{
+					color: rgba($menucolor, 1);
+				}
+	
+			}
+		}
+
+		button{
+			
+			min-width: 250px;
+			box-shadow: 3px 3px 5px rgba($black, .8);
+			@include respond-below(sm){
+				min-width: 170px;
+			}
+
+			a{
+				height: 100%;
+				width: 100%;
+				font-size: 2.5rem !important;
+
+				@include respond-below(sm){
+					padding: 3px !important;
+					font-size: 1.3rem !important;
+				}
+			}
+		}
+	}
+}	
+
+

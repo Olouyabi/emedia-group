@@ -1,0 +1,80 @@
+[
+{
+  "model": "blog.categoriedepost",
+  "pk": 1,
+  "fields": {
+    "nom_categorie": "Editions de livres",
+    "slug": "editions-de-livres"
+  }
+},
+{
+  "model": "blog.categoriedepost",
+  "pk": 2,
+  "fields": {
+    "nom_categorie": "Le numérique au Bénin",
+    "slug": "le-numerique-au-benin"
+  }
+},
+{
+  "model": "blog.categoriedepost",
+  "pk": 3,
+  "fields": {
+    "nom_categorie": "Design et montage de livre",
+    "slug": "design-et-montage-de-livre"
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 5,
+  "fields": {
+    "titre": "Le processus d'édition d'un livre",
+    "slug": "le-processus-dedition-dun-livre",
+    "contenu": "<p>Les vid&eacute;os vous permettent de faire passer votre message de fa&ccedil;on convaincante. Quand vous cliquez sur Vid&eacute;o en ligne, vous pouvez coller le code incorpor&eacute; de la vid&eacute;o que vous souhaitez ajouter. Vous pouvez &eacute;galement taper un mot-cl&eacute; pour rechercher en ligne la vid&eacute;o qui convient le mieux &agrave; votre document. Pour donner un aspect professionnel &agrave; votre document, Word offre des conceptions d&rsquo;en-t&ecirc;te, de pied de page, de page de garde et de zone de texte qui se compl&egrave;tent mutuellement. Vous pouvez par exemple ajouter une page de garde, un en-t&ecirc;te et une barre lat&eacute;rale identiques.</p>\r\n\r\n<p><span style=\"color:#3498db\"><strong>Graphiques et SmartArt</strong></span></p>\r\n\r\n<p>Cliquez sur Ins&eacute;rer et s&eacute;lectionnez les &eacute;l&eacute;ments de votre choix dans les diff&eacute;rentes galeries. Les th&egrave;mes et les styles vous permettent &eacute;galement de structurer votre document. Quand vous cliquez sur Conception et s&eacute;lectionnez un nouveau th&egrave;me, les images, graphiques et SmartArt sont modifi&eacute;s pour correspondre au nouveau th&egrave;me choisi. Quand vous appliquez des styles, les titres changent pour refl&eacute;ter le nouveau th&egrave;me. Gagnez du temps dans Word gr&acirc;ce aux nouveaux boutons qui s&#39;affichent quand vous en avez besoin.</p>\r\n\r\n<p>Si vous souhaitez modifier la fa&ccedil;on dont une image s&rsquo;ajuste &agrave; votre document, cliquez sur celle-ci pour qu&rsquo;un bouton d&rsquo;options de disposition apparaisse en regard de celle-ci. Quand vous travaillez sur un tableau, cliquez &agrave; l&rsquo;emplacement o&ugrave; vous souhaitez ajouter une ligne ou une colonne, puis cliquez sur le signe plus. La lecture est &eacute;galement simplifi&eacute;e gr&acirc;ce au nouveau mode Lecture. Vous pouvez r&eacute;duire certaines parties du document et vous concentrer sur le texte d&eacute;sir&eacute;. Si vous devez stopper la lecture avant d&rsquo;atteindre la fin de votre document, Word garde en m&eacute;moire l&rsquo;endroit o&ugrave; vous avez arr&ecirc;t&eacute; la lecture, m&ecirc;me sur un autre appareil.</p>",
+    "image": "images/banners/default-bg-emedia.png",
+    "auteur": 2,
+    "date_creation": "2023-04-12T08:09:28.855Z",
+    "date_modification": "2023-04-12T08:11:17.620Z",
+    "status": "publier",
+    "date_publication": "2023-04-12T08:06:20Z",
+    "categorie_post": [
+      1
+    ]
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 6,
+  "fields": {
+    "titre": "Notre apport à l'essor du numérique au Bénin",
+    "slug": "notre-apport-a-lessor-du-numerique-au-benin",
+    "contenu": "<p>Les vid&eacute;os vous permettent de faire passer votre message de fa&ccedil;on convaincante. Quand vous cliquez sur Vid&eacute;o en ligne, vous pouvez coller le code incorpor&eacute; de la vid&eacute;o que vous souhaitez ajouter. Vous pouvez &eacute;galement taper un mot-cl&eacute; pour rechercher en ligne la vid&eacute;o qui convient le mieux &agrave; votre document. Pour donner un aspect professionnel &agrave; votre document, Word offre des conceptions d&rsquo;en-t&ecirc;te, de pied de page, de page de garde et de zone de texte qui se compl&egrave;tent mutuellement. Vous pouvez par exemple ajouter une page de garde, un en-t&ecirc;te et une barre lat&eacute;rale identiques.</p>\r\n\r\n<p><img alt=\"laugh\" src=\"http://127.0.0.1:8000/static/ckeditor/ckeditor/plugins/smiley/images/teeth_smile.png\" style=\"height:23px; width:23px\" title=\"laugh\" /></p>\r\n\r\n<p>Cliquez sur Ins&eacute;rer et s&eacute;lectionnez les &eacute;l&eacute;ments de votre choix dans les diff&eacute;rentes galeries. Les th&egrave;mes et les styles vous permettent &eacute;galement de structurer votre document. Quand vous cliquez sur Conception et s&eacute;lectionnez un nouveau th&egrave;me, les images, graphiques et SmartArt sont modifi&eacute;s pour correspondre au nouveau th&egrave;me choisi. Quand vous appliquez des styles, les titres changent pour refl&eacute;ter le nouveau th&egrave;me. Gagnez du temps dans Word gr&acirc;ce aux nouveaux boutons qui s&#39;affichent quand vous en avez besoin.</p>\r\n\r\n<table align=\"center\" border=\"1\" cellpadding=\"1\" cellspacing=\"1\" style=\"width:500px\" summary=\"ce tableau résume notre apport en valeur ajouté au développement du numérique dans notre pays\">\r\n\t<caption>valeur ajout&eacute;e</caption>\r\n\t<thead>\r\n\t\t<tr>\r\n\t\t\t<th scope=\"col\"><span style=\"color:#2980b9\"><span style=\"background-color:#ecf0f1\">An&eacute;e</span></span></th>\r\n\t\t\t<th scope=\"col\"><span style=\"color:#2980b9\"><span style=\"background-color:#ecf0f1\">Chiffres d&#39;affaire</span></span></th>\r\n\t\t</tr>\r\n\t</thead>\r\n\t<tbody>\r\n\t\t<tr>\r\n\t\t\t<td>2019</td>\r\n\t\t\t<td>15 000 000</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>2020</td>\r\n\t\t\t<td>28 000 000</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>2021</td>\r\n\t\t\t<td>29 000 000</td>\r\n\t\t</tr>\r\n\t</tbody>\r\n</table>\r\n\r\n<p>&nbsp;</p>",
+    "image": "images/banners/default-bg-emedia.png",
+    "auteur": 2,
+    "date_creation": "2023-04-12T08:21:37.586Z",
+    "date_modification": "2023-04-17T13:03:26.259Z",
+    "status": "publier",
+    "date_publication": "2023-04-12T08:11:17Z",
+    "categorie_post": [
+      2
+    ]
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 7,
+  "fields": {
+    "titre": "Les logiciles de design et montage de livre",
+    "slug": "les-logiciles-de-design-et-montage-de-livre",
+    "contenu": "<p>Les vid&eacute;os vous permettent de faire passer votre message de fa&ccedil;on convaincante. Quand vous cliquez sur Vid&eacute;o en ligne, vous pouvez coller le code incorpor&eacute; de la vid&eacute;o que vous souhaitez ajouter. Vous pouvez &eacute;galement taper un mot-cl&eacute; pour rechercher en ligne la vid&eacute;o qui convient le mieux &agrave; votre document. Pour donner un aspect professionnel &agrave; votre document, Word offre des conceptions d&rsquo;en-t&ecirc;te, de pied de page, de page de garde et de zone de texte qui se compl&egrave;tent mutuellement. Vous pouvez par exemple ajouter une page de garde, un en-t&ecirc;te et une barre lat&eacute;rale identiques.</p>\r\n\r\n<p><img alt=\"laugh\" src=\"http://127.0.0.1:8000/static/ckeditor/ckeditor/plugins/smiley/images/teeth_smile.png\" style=\"height:23px; width:23px\" title=\"laugh\" /></p>\r\n\r\n<p>Cliquez sur Ins&eacute;rer et s&eacute;lectionnez les &eacute;l&eacute;ments de votre choix dans les diff&eacute;rentes galeries. Les th&egrave;mes et les styles vous permettent &eacute;galement de structurer votre document. Quand vous cliquez sur Conception et s&eacute;lectionnez un nouveau th&egrave;me, les images, graphiques et SmartArt sont modifi&eacute;s pour correspondre au nouveau th&egrave;me choisi. Quand vous appliquez des styles, les titres changent pour refl&eacute;ter le nouveau th&egrave;me. Gagnez du temps dans Word gr&acirc;ce aux nouveaux boutons qui s&#39;affichent quand vous en avez besoin.</p>\r\n\r\n<p>&nbsp;</p>",
+    "image": "images/banners/default-bg-emedia.png",
+    "auteur": 2,
+    "date_creation": "2023-04-17T13:05:24.668Z",
+    "date_modification": "2023-04-17T13:05:24.668Z",
+    "status": "publier",
+    "date_publication": "2023-04-17T13:03:26Z",
+    "categorie_post": [
+      3
+    ]
+  }
+}
+]

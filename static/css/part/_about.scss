@@ -1,51 +1,4 @@
-﻿// .about {
-//     margin: 3rem auto;
-//     box-sizing: border-box;
-   
-
-//     .row {
-//         @include flexCenter(row, center);
-
-
-//         .about-text {
-//             background: $white;
-//             position: relative;
-//             padding: 3rem 5rem;
-//             border-radius: $bradius;
-//             box-shadow: 0px 0px 5px lighten($black, 50%);
-//             margin-right: -10rem;
-//             z-index: 2;
-
-//             @include media-breakpoint-down(md) {
-//                 margin-right: 0;
-//                 padding: 3rem 2rem;
-//             }
-//         }
-
-//         .about-img {
-//             position: relative;
-//             overflow: hidden;
-//             border-radius: $bradius;
-
-
-//             img{
-//                 transition: all .8s ease-in-out;
-//             }
-
-//             &:hover{
-//                 img{
-//                  transform: scale(1.2);
-//                 }
-//             }
-
-            
-//         }
-//     }
-
-// }
-
-
-
+﻿
 .section-about{
     background: $white;
     margin: 3rem auto;
@@ -75,7 +28,7 @@
             position: absolute;
             max-width: 280px;
             box-shadow: $box-shadow;
-            border-radius: $bradius-plus;
+            border-radius: $bradius;
             transition: all .8s ease-in-out;
             
 

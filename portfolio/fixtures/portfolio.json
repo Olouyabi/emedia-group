@@ -1,0 +1,310 @@
+[
+{
+  "model": "portfolio.categorieportfolio",
+  "pk": 1,
+  "fields": {
+    "nom_categorie": "Affiches",
+    "slug": "affiches"
+  }
+},
+{
+  "model": "portfolio.categorieportfolio",
+  "pk": 2,
+  "fields": {
+    "nom_categorie": "Cartes",
+    "slug": "cartes"
+  }
+},
+{
+  "model": "portfolio.categorieportfolio",
+  "pk": 4,
+  "fields": {
+    "nom_categorie": "catalogues",
+    "slug": "catalogues"
+  }
+},
+{
+  "model": "portfolio.categorieportfolio",
+  "pk": 5,
+  "fields": {
+    "nom_categorie": "couvertures",
+    "slug": "couvertures"
+  }
+},
+{
+  "model": "portfolio.categorieportfolio",
+  "pk": 6,
+  "fields": {
+    "nom_categorie": "flyers",
+    "slug": "flyers"
+  }
+},
+{
+  "model": "portfolio.categorieportfolio",
+  "pk": 7,
+  "fields": {
+    "nom_categorie": "logos",
+    "slug": "logos"
+  }
+},
+{
+  "model": "portfolio.categorieportfolio",
+  "pk": 9,
+  "fields": {
+    "nom_categorie": "faire-part",
+    "slug": "faire-part"
+  }
+},
+{
+  "model": "portfolio.portfolios",
+  "pk": 2,
+  "fields": {
+    "categorie": 5,
+    "nom": "couv la danse des reptiles",
+    "slug": "couv-la-danse-des-reptiles",
+    "image": "galeries/Couv_La_danse_des_reptiles_avenc_mention_du_Grand_Prix_CcRXdll.jpg",
+    "date_creation": "2023-02-24T09:08:12.272Z",
+    "status": "actu"
+  }
+},
+{
+  "model": "portfolio.portfolios",
+  "pk": 3,
+  "fields": {
+    "categorie": 5,
+    "nom": "couv d'enseignant vacataire à la crypto",
+    "slug": "couv-denseignant-vacataire-a-la-crypto",
+    "image": "galeries/Couverture_Denseignant_vacataire_à_la_crypto-millionnaire_TDzjtuq.jpg",
+    "date_creation": "2023-02-24T09:08:23.562Z",
+    "status": "actu"
+  }
+},
+{
+  "model": "portfolio.portfolios",
+  "pk": 4,
+  "fields": {
+    "categorie": 2,
+    "nom": "Carte de visite recto",
+    "slug": "carte-de-visite-recto",
+    "image": "galeries/Carte_de_visite_recto_64AoTv7.png",
+    "date_creation": "2023-02-24T14:36:24.862Z",
+    "status": "actu"
+  }
+},
+{
+  "model": "portfolio.portfolios",
+  "pk": 5,
+  "fields": {
+    "categorie": 2,
+    "nom": "Carte de visite verso",
+    "slug": "carte-de-visite-verso",
+    "image": "galeries/Carte_de_visite_verso_d0eZI2E.png",
+    "date_creation": "2023-02-24T14:36:43.547Z",
+    "status": "actu"
+  }
+},
+{
+  "model": "portfolio.portfolios",
+  "pk": 6,
+  "fields": {
+    "categorie": 4,
+    "nom": "Catalogue produits Greenies ventures",
+    "slug": "catalogue-produits-greenies-ventures",
+    "image": "galeries/Catalogue_produits_Greenies_ventures_Page_01_XuduuXV.jpg",
+    "date_creation": "2023-02-24T14:37:24.977Z",
+    "status": "actu"
+  }
+},
+{
+  "model": "portfolio.portfolios",
+  "pk": 7,
+  "fields": {
+    "categorie": 4,
+    "nom": "CATALOGUE CHRIST FASHION",
+    "slug": "catalogue-christ-fashion",
+    "image": "galeries/CATALOGUE_CHRIST_FASHION_Page_01_FzsdO8R.jpg",
+    "date_creation": "2023-02-24T14:37:48.247Z",
+    "status": "actu"
+  }
+},
+{
+  "model": "portfolio.portfolios",
+  "pk": 8,
+  "fields": {
+    "categorie": 6,
+    "nom": "Porte document Pros-Fashion",
+    "slug": "porte-document-pros-fashion",
+    "image": "galeries/Visuel_EDEN_PALACE_4Pnq4j8.jpg",
+    "date_creation": "2023-02-24T14:38:22.891Z",
+    "status": "actu"
+  }
+},
+{
+  "model": "portfolio.portfolios",
+  "pk": 9,
+  "fields": {
+    "categorie": 6,
+    "nom": "eeee-1",
+    "slug": "eeee-1",
+    "image": "galeries/eeee-1.jpg",
+    "date_creation": "2023-02-24T14:38:47.566Z",
+    "status": "actu"
+  }
+},
+{
+  "model": "portfolio.portfolios",
+  "pk": 10,
+  "fields": {
+    "categorie": 6,
+    "nom": "Menu Verso",
+    "slug": "menu-verso",
+    "image": "galeries/Menu_Verso.jpg",
+    "date_creation": "2023-02-24T14:39:08.321Z",
+    "status": "actu"
+  }
+},
+{
+  "model": "portfolio.portfolios",
+  "pk": 11,
+  "fields": {
+    "categorie": 7,
+    "nom": "LOgo Inov presse",
+    "slug": "logo-inov-presse",
+    "image": "galeries/LOgo_Inov_presse.png",
+    "date_creation": "2023-02-24T14:39:35.778Z",
+    "status": "actu"
+  }
+},
+{
+  "model": "portfolio.portfolios",
+  "pk": 12,
+  "fields": {
+    "categorie": 7,
+    "nom": "Logo_Les nouvelles éditions du sahel",
+    "slug": "logo_les-nouvelles-editions-du-sahel",
+    "image": "galeries/Logo_Les_nouvelles_éditions_du_sahel_Nveau.png",
+    "date_creation": "2023-02-24T14:40:06.283Z",
+    "status": "actu"
+  }
+},
+{
+  "model": "portfolio.portfolios",
+  "pk": 13,
+  "fields": {
+    "categorie": 7,
+    "nom": "Makaron PF 3",
+    "slug": "makaron-pf-3",
+    "image": "galeries/Makaron_PF_3..jpg",
+    "date_creation": "2023-02-24T14:40:35.900Z",
+    "status": "actu"
+  }
+},
+{
+  "model": "portfolio.portfolios",
+  "pk": 14,
+  "fields": {
+    "categorie": 5,
+    "nom": "Couverture L'athlétisme",
+    "slug": "couverture-lathletisme",
+    "image": "galeries/Couverture_Lathlétisme_uJyS0ig.jpg",
+    "date_creation": "2023-02-24T14:41:14.796Z",
+    "status": "actu"
+  }
+},
+{
+  "model": "portfolio.portfolios",
+  "pk": 15,
+  "fields": {
+    "categorie": 5,
+    "nom": "Couverture Nana femme battante",
+    "slug": "couverture-nana-femme-battante",
+    "image": "galeries/Couverture_Nana_femme_battante.jpg",
+    "date_creation": "2023-02-24T14:41:52.046Z",
+    "status": "actu"
+  }
+},
+{
+  "model": "portfolio.portfolios",
+  "pk": 16,
+  "fields": {
+    "categorie": 5,
+    "nom": "Couv Les enfants du lac maudit 2",
+    "slug": "couv-les-enfants-du-lac-maudit-2",
+    "image": "galeries/Couv_Les_enfants_du_lac_maudit_2.jpg",
+    "date_creation": "2023-02-24T14:59:08.284Z",
+    "status": "actu"
+  }
+},
+{
+  "model": "portfolio.portfolios",
+  "pk": 17,
+  "fields": {
+    "categorie": 9,
+    "nom": "faire-part",
+    "slug": "faire-part",
+    "image": "galeries/Faire-part.jpg",
+    "date_creation": "2023-02-24T15:01:37.039Z",
+    "status": "actu"
+  }
+},
+{
+  "model": "portfolio.portfolios",
+  "pk": 18,
+  "fields": {
+    "categorie": 6,
+    "nom": "Flyers Narcisse parakou",
+    "slug": "flyers-narcisse-parakou",
+    "image": "galeries/Flyers_Narcisse_parakou.png",
+    "date_creation": "2023-02-25T10:31:19.288Z",
+    "status": "actu"
+  }
+},
+{
+  "model": "portfolio.portfolios",
+  "pk": 20,
+  "fields": {
+    "categorie": 6,
+    "nom": "Visuel Voix off",
+    "slug": "visuel-voix-off",
+    "image": "galeries/Visuel_Voix_off.jpg",
+    "date_creation": "2023-02-25T10:32:00.588Z",
+    "status": "actu"
+  }
+},
+{
+  "model": "portfolio.portfolios",
+  "pk": 21,
+  "fields": {
+    "categorie": 1,
+    "nom": "Porte document Pros-Fashion",
+    "slug": "porte-document-pros-fashion",
+    "image": "galeries/Porte_document_Pros-Fashion_oJNinui.jpg",
+    "date_creation": "2023-02-25T10:32:38.088Z",
+    "status": "actu"
+  }
+},
+{
+  "model": "portfolio.portfolios",
+  "pk": 24,
+  "fields": {
+    "categorie": 5,
+    "nom": "Couverture La rivale de Dieu (Première de couv)",
+    "slug": "couverture-la-rivale-de-dieu-premiere-de-couv",
+    "image": "galeries/Couverture_La_rivale_de_Dieu_Première_de_couv.jpg",
+    "date_creation": "2023-02-25T12:54:19.343Z",
+    "status": "actu"
+  }
+},
+{
+  "model": "portfolio.portfolios",
+  "pk": 25,
+  "fields": {
+    "categorie": 5,
+    "nom": "Couv Il faut battre....",
+    "slug": "couv-il-faut-battre",
+    "image": "galeries/Couv_Il_faut_battre.....jpg",
+    "date_creation": "2023-02-25T12:54:42.377Z",
+    "status": "actu"
+  }
+}
+]

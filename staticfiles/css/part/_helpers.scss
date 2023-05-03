@@ -1,0 +1,7 @@
+.display-flex-row{
+    @include d-flex(row)
+}
+
+.display-flex-col{
+    @include d-flex(column)
+}

@@ -29,9 +29,7 @@ class Post(models.Model):
     categorie_post = models.ManyToManyField(CategorieDePost, related_name="categorie_posts")
     titre = models.CharField(max_length=200)
     slug = models.SlugField(max_length=200)
-    # contenu = models.TextField()
     contenu = RichTextField()
-    # contenu = tinymce_models.HTMLField()
     image = models.ImageField(upload_to='blogs', default='images/banners/default-bg-emedia.png')
     auteur = models.ForeignKey(User, on_delete=models.PROTECT, related_name='posted')
     date_creation = models.DateTimeField(auto_now_add=True)
@@ -56,7 +54,6 @@ class Commentaire(models.Model):
     commentataire = models.CharField(max_length=100, verbose_name='nom')
     email = models.EmailField(max_length=200)
     commentaire =  RichTextField()
-    # commentaire = tinymce_models.HTMLField()
     creation = models.DateTimeField(auto_now_add= True)
     modification = models.DateTimeField(auto_now= True)
 

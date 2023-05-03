@@ -1,5 +1,3 @@
-from multiprocessing import context
-from unittest import result
 from django.shortcuts import get_object_or_404, render
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.contrib import messages
@@ -37,8 +35,8 @@ def post_list(request, category=None):
 # Détails d'une publication
 def post_detail(request, day:int, month:int, year:int, slug: str):
     categories = CategorieDePost.objects.all()
-    post = get_object_or_404(Post, slug=slug, status="published", date_publication__day=day, date_publication__month=month, date_publication__year=year)
-    commentaires = Commentaire.objects.filter(post=post.id)
+    post = get_object_or_404(Post, slug=slug, status="publier", date_publication__day=day, date_publication__month=month, date_publication__year=year)
+    commentaires = Commentaire.objects.filter(post=post.id) # type: ignore
     new_comment = None
     if request.method == 'POST':
         comment_form = CommentForm(data=request.POST)
@@ -73,15 +71,6 @@ def recherche_post(request):
             query = search_form.cleaned_data['query']
             results = Post.published.annotate(search=SearchVector('titre', 'contenu'),
             ).filter(search=query)
-
-    # paginator = Paginator(results, 2)
-    # page = request.GET.get('page')
-    # try:
-    #     results = paginator.page(page)
-    # except PageNotAnInteger:
-    #     results = paginator.page(1)
-    # except EmptyPage:
-    #     results = paginator.page(paginator.num_pages)
 
     context = {
         'search_form': search_form,

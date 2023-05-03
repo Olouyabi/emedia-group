@@ -1,0 +1,195 @@
+/* Blog */
+// sidebar
+.sidebar-box {
+	margin-bottom: 30px;
+	padding: 25px;
+	font-size: 15px;
+	width: 100%;
+	
+	float: left;
+	
+	background: $white;
+	*:last-child {
+		margin-bottom: 0;
+	}
+	h3 {
+		font-size: 18px;
+		margin-bottom: 15px;
+	}
+}
+
+.categories, .sidelink {
+	li {
+		position: relative;
+		margin-bottom: 10px;
+		padding-bottom: 10px;
+		border-bottom: 1px dotted gray('300');
+		list-style: none;
+		&:last-child {
+			margin-bottom: 0;
+			border-bottom: none;
+			padding-bottom: 0;
+		}
+		a {
+			display: block;
+			span {
+				position: absolute;
+				right: 0;
+				top: 0;
+				color: #ccc;
+			}
+		}
+		&.active {
+			a {
+				color: $black;
+				font-style: italic;
+			}
+		}
+	}
+}
+
+
+.comment-form-wrap {
+	clear: both;
+}
+
+.comment-list {
+	padding: 0;
+	margin: 0;
+	.children {
+		padding: 50px 0 0 40px;
+		margin: 0;
+		float: left;
+		width: 100%;
+	}
+	li {
+		padding: 0;
+		margin: 0 0 30px 0;
+		float: left;
+		width: 100%;
+		clear: both;
+		list-style: none;
+		.vcard {
+			width: 80px;
+			float: left;
+			img {
+				width: 50px;
+				border-radius: 50%;
+			}
+		}
+		.comment-body {
+			float: right;
+			width: calc(100% - 80px);
+			h3 {
+				font-size: 20px;
+			}
+			.meta {
+				text-transform: uppercase;
+				font-size: 13px;
+				letter-spacing: .1em;
+				color: #ccc;
+			}
+			.reply {
+				padding: 5px 10px;
+				background: lighten($black, 90%);
+				color: $black;
+				text-transform: uppercase;
+				font-size: 14px;
+				&:hover {
+					color: $black;
+					background: lighten($black, 89%);
+				}
+			}
+		}
+	}
+}
+
+.search-form {
+	background: lighten($black, 97%);
+	padding: 10px;
+
+	.form-group {
+		position: relative;
+		input {
+			padding-right: 50px;
+		}
+	}
+	.icon {
+		position: absolute;
+		top: 50%;
+		right: 20px;
+		transform: translateY(-50%);
+	}
+}
+
+.post-meta {
+	font-size: 13px;
+	text-transform: uppercase;
+	letter-spacing: .2em;
+	a {
+		color: $white;
+		border-bottom: 1px solid rgba($white, .5);
+	}
+}
+
+.circle-icon-wrap {
+	width: 50px;
+	height:50px;
+	border-radius: 50%;
+	background: $primecolor;
+	display: inline-block;
+	position: relative;
+	> span {
+		display: inline-block;
+		position: absolute;
+		
+		color: $white;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+}
+
+	.media-image {
+		box-shadow: 0 5px 40px -5px rgba(0,0,0,.1);
+		transition: .3s all ease-in-out;
+		.media-image-body {
+			padding: 30px;
+		}
+		h2 {
+			font-size: 1.2rem;
+		}
+		&:hover {
+			box-shadow: 0 -3px 20px 3px rgba(0,0,0,.1);
+		}
+}
+
+.blog-redict {
+   a {
+      width: 100%;
+      display: inline-block;
+      color: $titlecolor;
+      font-size: 1.3em;
+      text-align: center;
+      transition: $transitioneasy;
+
+      &:hover {
+         color: $primecolor;
+
+         span {
+            color: $titlecolor;
+            display: inline-block;
+            position: relative;
+            animation: oxille 1s linear 0s infinite;
+         }
+      }
+   }
+}
+
+.media-image-body{
+	h2{
+		color: $titlecolor !important;
+		}
+	}
+
+

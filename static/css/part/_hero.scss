@@ -1,9 +1,11 @@
-.hero-row, .row-page {
+.section-hero{
   @include sectionView ;
   background-image: url(../images/banners/africa_colorsangle.png);
   @include imageConfig;
+}
 
-  
+.hero-row, .row-page {
+ 
   /*--------Partie gauche de Hero------*/
   .hero-home {
     background-image: url(../images/banners/africa_colors10.svg);
@@ -35,7 +37,7 @@
           @include flexCenter(column, center);
           width: 100%;
           background: $white;
-          font-family: $titlefont;
+          font-family: $regulartf;
           border-radius: $bradius;
           padding-top: 2rem;
 
@@ -55,24 +57,29 @@
   .hero-pages{
     padding-top: 10rem;
     @include respond-below(sm) {
-      padding-top: 8rem;
+      padding-top: 5rem;
     }
   }
 
   /*--------Partie droite de Hero------*/
-  .hero-right {
+  .hero-right, .right-hero {
     margin: 0 !important;
     padding: 0 !important;
     @include flexCenter(column, center);
 
     
     .hero-heading {
+      @include respond-below(sm) {
+        @include flexCenter(column, center);
+        text-align: center;
+        letter-spacing: 0.3rem;
+      }
       .hero-title {
         font-size: 70px;
         color: $titlecolor;
         font-weight: 500;
         letter-spacing: 0.6rem;
-        font-family: $sitefont;
+        font-family: $regulartf;
 
         @include respond-below(md) {
           font-size: 80px;
@@ -80,7 +87,7 @@
         }
 
         @include respond-below(sm) {
-          font-size: 60px;
+          font-size: 50px;
           line-height: 30px;
         }
 
@@ -107,7 +114,7 @@
         }
 
         @include respond-below(sm) {
-          font-size: 4rem;
+          font-size: 3.5rem;
         }
 
         &.homeless-span {
@@ -129,7 +136,7 @@
         font-size: 3rem;
         color: $primecolor !important;
         text-align: center;
-        font-family: $titlefont;
+        font-family: $amazingtf;
 
        
         @include respond-below(md) {
@@ -154,6 +161,30 @@
   }
 }
 
+.right-hero{
+  @include respond-below(sm) {
+    display: block !important;
+  }
+}
+
 .row-page{
-  height: 90vh !important;
+  @include respond-below(sm) {
+    @include flexCenter(column, center);  
+  }
+}
+
+.hero-direct{
+  & >span{
+    a{
+      color: $titlecolor;
+    }
+  }
+}
+
+.cat-row{
+  margin-top: 10rem;
+
+  .hero-cat{
+    font-size: 1.5em;
+  }
 }

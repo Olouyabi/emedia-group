@@ -1,0 +1,173 @@
+.hero-row, .row-page {
+  @include sectionView ;
+  background-image: url(../images/banners/africa_colorsangle.png);
+  @include imageConfig;
+
+  
+  /*--------Partie gauche de Hero------*/
+  .hero-home {
+    background-image: url(../images/banners/africa_colors10.svg);
+    @include imageConfig;
+
+    .hero-author {
+      width: 100%;
+      margin-top: 8rem;
+      @include flexCenter(column, center);
+      
+      img {
+        width: 300px;
+        margin-bottom: -2rem;
+        z-index: 2;
+      }
+
+      .hero-info {
+        @include flexCenter(column, center);
+        width: 90%;
+        background: rgba($white, 0.5);
+        margin: 0 auto;
+        min-height: 100px;
+        border-radius: $bradius;
+        z-index: 1;
+        box-shadow: $box-shadow;
+
+        .hero-author-hi {
+          margin: 0 auto;
+          @include flexCenter(column, center);
+          width: 100%;
+          background: $white;
+          font-family: $regulartf;
+          border-radius: $bradius;
+          padding-top: 2rem;
+
+          span {
+            font-size: 1.5em;
+            color: $primecolor;
+            font-weight: 700;
+            padding: 15px 10px;
+            line-height: 30px;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+
+  .hero-pages{
+    padding-top: 10rem;
+    @include respond-below(sm) {
+      padding-top: 5rem;
+    }
+  }
+
+  /*--------Partie droite de Hero------*/
+  .hero-right, .right-hero {
+    margin: 0 !important;
+    padding: 0 !important;
+    // @include flexCenter(column, center);
+
+    
+    .hero-heading {
+      @include respond-below(sm) {
+        @include flexCenter(column, center);
+        text-align: center;
+        letter-spacing: 0.3rem;
+      }
+      .hero-title {
+        font-size: 70px;
+        color: $titlecolor;
+        font-weight: 500;
+        letter-spacing: 0.6rem;
+        font-family: $sitefont;
+
+        @include respond-below(md) {
+          font-size: 80px;
+          line-height: 50px;
+        }
+
+        @include respond-below(sm) {
+          font-size: 50px;
+          line-height: 30px;
+        }
+
+        &.homeless-h {
+          font-size: 7rem;
+          color: $white;
+          font-weight: 700;
+        }
+      }
+
+      .hero-subtitle {
+        font-size: 7rem;
+        color: $primecolor;
+        text-transform: uppercase;
+        line-height: 15px;
+        font-family: $sitefont;
+        letter-spacing: 0.5rem;
+        font-weight: 900;
+
+        @include respond-below(md) {
+          font-size: 5.2rem;
+          color: $titlecolor;
+          line-height: 60px;
+        }
+
+        @include respond-below(sm) {
+          font-size: 3.5rem;
+        }
+
+        &.homeless-span {
+          text-transform: uppercase;
+          font-size: 80px;
+          color: $hovercolor;
+          font-weight: 900;
+          line-height: 20px;
+        }
+      }
+      &.prime-hero{
+        @include flexCenter(column, center);
+      }
+    }
+
+    .hero-slogan {
+      margin-top: 2rem;
+      .slogan {
+        font-size: 3rem;
+        color: $primecolor !important;
+        text-align: center;
+        font-family: $regulartf;
+
+       
+        @include respond-below(md) {
+          font-size: 2rem;
+        }
+
+        @include respond-below(sm) {
+          font-size: 1.8rem;
+        }
+
+        &.homeless-p {
+          font-size: 5rem;
+          line-height: 40px;
+          color: $hovercolor !important;
+        }
+      }
+    }
+  
+    @include respond-below(sm) {
+      display: none;
+    }
+  }
+}
+
+.right-hero{
+  @include respond-below(sm) {
+    display: block !important;
+  }
+}
+
+
+.row-page{
+  @include respond-below(sm) {
+    @include flexCenter(column, center);  
+  }
+}

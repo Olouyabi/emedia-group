@@ -1,0 +1,62 @@
+[
+{
+  "model": "service.services",
+  "pk": 1,
+  "fields": {
+    "titre": "E-média communication",
+    "slug": "e-media-communication",
+    "image": "services/logo_emedia-com.png",
+    "contenu": "Pour tous travaux de création d'image corporative, de conception de matériel publicitaire percutant, d'édition de documents, de retouche de vos images, nous mettons à votre disposition une équipe dynamique",
+    "date_creation": "2023-02-18T17:10:46.144Z",
+    "status": "actu"
+  }
+},
+{
+  "model": "service.services",
+  "pk": 2,
+  "fields": {
+    "titre": "Fous Sans Frontière",
+    "slug": "fous-sans-frontiere",
+    "image": "services/logo_fsf.png",
+    "contenu": "Nous assurons la diffusion et la distribution de vos ouvrages sur tout le territoire national et dans la sous région grâce à nos partenaires au Togo, Ghana, Côte d’Ivoire, Burkina-Faso, Mali, Sénégal et au Niger.",
+    "date_creation": "2023-02-18T17:41:13.036Z",
+    "status": "actu"
+  }
+},
+{
+  "model": "service.services",
+  "pk": 3,
+  "fields": {
+    "titre": "Inov Press",
+    "slug": "inov-press",
+    "image": "services/logo_inov-press.png",
+    "contenu": "Notre parfaite maîtrise des contraintes techniques de l'imprimerie combinée à une créativité originale met en valeur le travail, les compétences et l'image de nos clients.",
+    "date_creation": "2023-02-18T17:41:45.519Z",
+    "status": "actu"
+  }
+},
+{
+  "model": "service.temoignages",
+  "pk": 1,
+  "fields": {
+    "image": "avis/avatar-default.png",
+    "nom": "Olouyabi Chabi",
+    "titre": "Oyinus Manager",
+    "avis": "Très bon graphiste que je vous recommande",
+    "status": "actu",
+    "date_creation": "2023-02-24T14:54:32.172Z"
+  }
+},
+{
+  "model": "service.temoignages",
+  "pk": 2,
+  "fields": {
+    "image": "avis/avatar-default_Cq4bGLX.png",
+    "nom": "Séphora Vinékpon",
+    "titre": "Web Designer Oyinus",
+    "avis": "Rigoureux et professionnel, Jules est votre homme en matière du numérique",
+    "status": "actu",
+    "date_creation": "2023-02-24T14:56:36.871Z"
+  }
+}
+]

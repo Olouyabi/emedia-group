@@ -47,11 +47,16 @@
 		}
 
 		.navtoggler {
-			@include flexCenter(row, space-between);
+			@include flexCenter(row, center);
 			cursor: pointer;
+            background-color: $primecolor;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            border: 2px solid $bannercolor;
 
 			.icon-menu {
-				color: $primecolor!important;
+				color: $white!important;
 				font-size: 3rem;
 				font-weight: 300;
 				@include respond-below(md) {
@@ -83,6 +88,7 @@
                 }
 
             .navtoggler {
+                background-color: $bannercolor;
                 .icon-menu, .text-menu {
                     color: $titlecolor !important;
                 }
@@ -100,20 +106,19 @@
     overflow-y: auto;
     z-index: 99;
     
-    @include respond-below(md) {
-        width: 70vw;
-    }
-
     top: 0;
     right: -100%;
     bottom: 0;
     background: $menucolor;
     padding: 3rem;
     box-shadow: -5px 0px 5px rgba($black, $alpha: .2);
-   /*  border-top-left-radius: 200px; */
-    /* border-bottom-right-radius: 200px; */
-    
     transition: $transitioncubic;
+
+    @include respond-below(md) {
+        width: 70vw;
+        overflow-y: scroll;
+        padding: 2rem;
+    }
 
     &.show-menu {
         right: 0;
@@ -157,6 +162,10 @@
                 &:hover {
                     color: $titlecolor;
                     margin-left: 2rem;
+                }
+
+                @include respond-below(sm) {
+                    font-size: 1.5rem;
                 }
             }
         }

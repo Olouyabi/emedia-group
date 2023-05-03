@@ -30,7 +30,7 @@
 
 html {
     scroll-behavior: smooth;
-    font-family: $sitefont;
+    font-family: $genfont !important;
     font-size: 10px;
     overflow-x: hidden;
 
@@ -51,8 +51,8 @@ html {
 }
 
 body {
-    overflow-x: hidden;
-    // line-height: 1.7;
+    font-family: 'Poppins' !important;
+    // overflow-x: hidden;
     color: $primecolor;
     font-size: $font-size-base;
     background-color: $white;
@@ -304,3 +304,39 @@ section {
         color: $titlecolor !important;
     }
 }
+
+// .wrapper{
+//     margin: 0 5rem;
+//     position: relative;
+//     top: -8rem;
+//     background-color: $white !important;
+//     box-shadow: -1px 3px 21px 8px rgba(0,0,0,0.15);
+//     -webkit-box-shadow: -1px 3px 21px 8px rgba(0,0,0,0.15);
+//     -moz-box-shadow: -1px 3px 21px 8px rgba(0,0,0,0.15);
+//     @include respond-below(md) {
+//         margin: 0 1rem;
+//     }
+//     @include respond-below(sm) {
+//         margin: 0;
+//     }
+// }
+
+
+.pre{
+    @include respond-below(sm) {
+        order: 1;
+    }
+}
+
+.der{
+    @include respond-below(sm) {
+        order: 2;
+    }
+}
+
+.form-control{
+    height: 35px;
+    font-size: 1.1em;
+    border-top-left-radius:  $bradius;
+    border-bottom-left-radius:  $bradius;
+    }

@@ -27,14 +27,9 @@ urlpatterns = [
     path('', include('blog.urls')),
     path('', include('service.urls')),
     path('', views.home, name='home'),
-    path('portfolio/<slug:category>/', views.home, name='categorie_portfoli'),
     path('admin/', admin.site.urls),
-    path(
-        "favicon.ico",
-        RedirectView.as_view(url=staticfiles_storage.url("favicon.ico")),
-    ),
+    path('favicon.ico/', RedirectView.as_view(url=staticfiles_storage.url('favicon.ico'))),
     path('editor/', include('django_summernote.urls')),
-    # path('djrichtextfield/', include('djrichtextfield.urls')),
 ]
 
 urlpatterns += staticfiles_urlpatterns()

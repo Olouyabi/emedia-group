@@ -1,0 +1,36 @@
+{% extends 'layouts/master.html' %} 
+{% load static %} 
+
+{% block tab_name %}
+
+{% endblock tab_name %}
+
+{% block heroview %}
+    <div class="container">
+        <div class="row row-page">
+            <div class="col-lg-4 hero-pages der"> <!-- DEBUT COL-4 GENERALE-->
+            <img 
+                class="img-fluid hero-author-img" 
+                src="{% static 'images/hero/hero-post.png' %}"
+                alt="image illustrant un post" 
+                title="image illustrant un post"
+            >
+            </div> <!-- FIN COL-4 GENERALE-->
+
+            <div class="col-lg-7 right-hero pre"> <!-- DEBUT COL-8 GENERALE-->
+                {% block heroRight %}
+                    
+                {% endblock heroRight %}
+            </div> <!-- FIN COL-8 GENERALE-->             
+        </div>
+    </div>
+{% endblock heroview %}
+
+{% block content %}
+    <div class="wrapper">
+        
+    </div>
+{% endblock content %}
+
+
+
